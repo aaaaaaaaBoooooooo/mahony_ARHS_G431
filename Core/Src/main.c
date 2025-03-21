@@ -98,6 +98,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+	LED(1);//µ„¡¡LED
 	if(imu_init(&myIMU1) == INV_IMU_OK &&imu_init(&myIMU2) == INV_IMU_OK)
 	{
 		IMU_Calibration();//IMUæ≤÷π◊¥Ã¨œ¬¡„∆ØΩ√’˝

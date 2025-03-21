@@ -33,9 +33,9 @@
 #define Gyro_Gain 		0.0610352f				//角速度变成度dps (初始化陀螺仪满量程+-2000 LSBg = 2*2000/65536.0)
 
 #define Gyro_Gr	    	0.0010641f			  	//角速度变成弧度(3.1415/180 * LSBg) 
-#define VAR_GyX				50.0f		            //1/方差   0.001f
-#define VAR_GyY				50.0f		            //1/方差   0.001f
-#define VAR_GyZ				50.0f		            //1/方差   0.001f
+#define VAR_GyX				100.0f		            //1/方差   0.001f
+#define VAR_GyY				100.0f		            //1/方差   0.001f
+#define VAR_GyZ				100.0f		            //1/方差   0.001f
 #define VAR_AcX				200.0f		            //1/方差   0.001f
 #define VAR_AcY				200.0f		            //1/方差   0.001f
 #define VAR_AcZ				200.0f		            //1/方差   0.001f
