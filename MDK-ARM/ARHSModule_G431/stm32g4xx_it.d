@@ -35,3 +35,9 @@ arhsmodule_g431\stm32g4xx_it.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ha
 arhsmodule_g431\stm32g4xx_it.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
 arhsmodule_g431\stm32g4xx_it.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h
 arhsmodule_g431\stm32g4xx_it.o: ../Core/Inc/stm32g4xx_it.h
+arhsmodule_g431\stm32g4xx_it.o: ../Core/Inc/usart.h
+arhsmodule_g431\stm32g4xx_it.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+arhsmodule_g431\stm32g4xx_it.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
+arhsmodule_g431\stm32g4xx_it.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+arhsmodule_g431\stm32g4xx_it.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+arhsmodule_g431\stm32g4xx_it.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h

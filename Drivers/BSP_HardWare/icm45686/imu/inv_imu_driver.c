@@ -133,7 +133,6 @@ int inv_imu_set_accel_fsr(inv_imu_device_t *s, accel_config0_accel_ui_fs_sel_t a
 	status |= inv_imu_read_reg(s, ACCEL_CONFIG0, 1, (uint8_t *)&accel_config0);
 	accel_config0.accel_ui_fs_sel = accel_fsr;
 	status |= inv_imu_write_reg(s, ACCEL_CONFIG0, 1, (uint8_t *)&accel_config0);
-	status |= inv_imu_read_reg(s, ACCEL_CONFIG0, 1, (uint8_t *)&accel_config0);
 	return status;
 }
 

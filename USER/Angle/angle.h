@@ -68,8 +68,9 @@ typedef volatile struct {
 } Quaternion;
 
 typedef struct{
+	vector3int16_t gyro;// 角速度
 	vector3int16_t acc;// 加速度
-	vector3float_t gyro;// 角速度
+	int16_t temperature;//温度
 	vector3float_t mag;// 磁场强度
 	vector3int16_t acc_offset;//陀螺仪零偏
 	vector3int16_t gyro_offset;//加速度计零偏

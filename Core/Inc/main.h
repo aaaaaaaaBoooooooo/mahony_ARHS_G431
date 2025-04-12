@@ -71,7 +71,7 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN Private defines */
 #define LED_TOGGLE HAL_GPIO_TogglePin(core_LED_GPIO_Port,core_LED_Pin)
-#define LED(x) HAL_GPIO_WritePin(core_LED_GPIO_Port,core_LED_Pin,x)
+#define LED(x) HAL_GPIO_WritePin(core_LED_GPIO_Port,core_LED_Pin,(GPIO_PinState)x)
 
 /* USER CODE END Private defines */
 

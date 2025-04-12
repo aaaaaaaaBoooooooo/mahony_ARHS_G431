@@ -106,13 +106,17 @@ int main(void)
 		myIMU2.is_init_ok =1;
 
 	}
-	else//¥ÌŒÛ led…¡À∏50Hz
+	else//¥ÌŒÛ led…¡À∏20Hz
 	{
-		LED_TOGGLE;
-		delay_ms(50);
+		while(1)
+		{
+			LED_TOGGLE;
+			delay_ms(50);
+		}
 	}
 	
 	HAL_TIM_Base_Start_IT(&htim1);
+	HAL_UARTEx_ReceiveToIdle_DMA(&huart1,USART1_RX_BUF,sizeof(USART1_RX_BUF));
   /* USER CODE END 2 */
 
   /* Infinite loop */

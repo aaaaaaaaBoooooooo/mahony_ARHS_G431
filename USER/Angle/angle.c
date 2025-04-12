@@ -218,6 +218,7 @@ void IMU_DataUpdate(void)
 	IMU_Data.acc.y=myIMU_data.acc_y;
 	IMU_Data.acc.z=myIMU_data.acc_z;
 	
+	IMU_Data.temperature = myIMU_data.temp;//IMU温度数据更新
 }
 /*******************************************************************************
 ** 函数名称: GetAngle(const _IMU_st *pImu,_Angle_st *pAngle, float dt) 
@@ -244,7 +245,7 @@ void IMU_GetAngle(float dt)
 				} Gravity,Acc,Gyro,AccGravity;
 
 	static struct V GyroIntegError = {0};
-	static  float KpDef = 0.8f ;//融合滤波系数
+	static  float KpDef = 0.9f ;//融合滤波系数
 	static  float KiDef = 0.0003f;
 	static Quaternion NumQ = {1, 0, 0, 0};
 	float q0_t,q1_t,q2_t,q3_t;

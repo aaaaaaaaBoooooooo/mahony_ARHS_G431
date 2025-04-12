@@ -33,16 +33,24 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   if(htim->Instance == TIM1)//定时器1中断 1ms
 	{
 		IMU_GetAngle(0.001f);//ARHS姿态解算
-		if(tim1_cnt_5ms >= 5)
+		if(tim1_cnt_2ms >= 2)//500Hz
 		{
-			uart_printf(&huart1,"%f,%f,%f,%d,%d,%d,%d,%d,%d,%d\n",Angle_Data.roll,Angle_Data.pitch,Angle_Data.yaw,myIMU_data.acc_x,myIMU_data.acc_y,myIMU_data.acc_z,myIMU_data.gyro_x,myIMU_data.gyro_y,myIMU_data.gyro_z,myIMU_data.temp	);
-			tim1_cnt_5ms =0;
+			if(uart_AT_mode == AT_Print_HEX)
+				uart_send_IMU_data(uart_AT_mode);
+				tim1_cnt_2ms =0;
+		}		
+		if(tim1_cnt_5ms >= 5)//200Hz
+		{
+			if(uart_AT_mode == AT_Print_ASCII)
+				uart_send_IMU_data(uart_AT_mode);
+				tim1_cnt_5ms =0;
 		}
 		if(tim1_cnt_500ms >= 500)
 		{
 			LED_TOGGLE;
 			tim1_cnt_500ms =0;
 		}		
+		tim1_cnt_2ms++;
 		tim1_cnt_5ms++;
 		tim1_cnt_500ms++;
 	}

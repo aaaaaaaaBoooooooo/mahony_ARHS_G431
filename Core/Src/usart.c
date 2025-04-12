@@ -60,6 +60,7 @@ void uart_printf(UART_HandleTypeDef *huart,const char *format, ...)
 
 }
 
+#include "angle.h"
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -142,7 +143,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
@@ -221,4 +222,82 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 
 /* USER CODE BEGIN 1 */
 
+uint8_t USART1_RX_BUF[512];
+
+AT_CMD_enum uart_AT_mode = AT_Print_HEX;//默认打印ASCII
+uint8_t data_buf[50];
+void uart_send_IMU_data(AT_CMD_enum at_cmd)
+{
+
+	if(at_cmd==AT_Print_ASCII)
+	{
+		//模式1 串口ASCII码打印--满足VOFA+ FireWater格式
+		if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
+			uart_printf(&huart1,"Data:%f,%f,%f,%d,%d,%d,%d,%d,%d,%d\r\n",Angle_Data.roll,Angle_Data.pitch,Angle_Data.yaw,IMU_Data.gyro.x,IMU_Data.gyro.y,IMU_Data.gyro.z,IMU_Data.acc.x,IMU_Data.acc.y,IMU_Data.acc.z,IMU_Data.temperature	);
+	
+	}
+	else if(at_cmd==AT_Print_HEX)
+	{
+		//模式2 串口HEX打印
+		memset(data_buf,0xFF,50);
+		/*帧头*/
+		data_buf[0] = 0x5A;
+		data_buf[1] = 0xA5;
+		
+		/*数据*/
+		memcpy(&data_buf[2],(uint8_t *)&Angle_Data,4*3);
+		memcpy(&data_buf[14],(uint8_t *)&IMU_Data,2*7);
+		
+		/*帧尾*/
+		data_buf[28] = 0x0D;
+		data_buf[29] = 0x0A;		
+		
+		if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
+			HAL_UART_Transmit_DMA(&huart1,data_buf,30);
+	}
+	else
+	{
+		printf("change AT:%d\r\n",at_cmd);
+	}
+}
+
+void uart_AT_cmd_decoder(uint8_t * data,uint16_t size)
+{
+	if(data[0] == 'A'&&data[1] == 'T'&&data[size-1]==0x0A)
+	{
+		/***确认为AT指令***/
+		if(data[2]=='+')
+		{
+			switch(data[3])
+			{
+				case '1':
+					uart_AT_mode = AT_Print_ASCII;
+					break;
+				case '2':
+					uart_AT_mode = AT_Print_HEX;
+					break;
+			}
+		}
+		else
+		{
+			printf("AT_OK\r\n");
+		}
+
+		
+	}
+}
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+{
+
+    if (huart->Instance == USART1)
+    {
+			uint8_t cnt = sizeof(USART1_RX_BUF) - __HAL_DMA_GET_COUNTER(&hdma_usart1_rx);
+
+			 /*解析协议*/
+			uart_AT_cmd_decoder(USART1_RX_BUF,cnt);
+			memset(USART1_RX_BUF, 0, cnt);
+    }
+
+
+}
 /* USER CODE END 1 */

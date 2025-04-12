@@ -40,7 +40,16 @@ extern "C" {
 extern UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN Private defines */
+typedef enum
+{
+	AT_Print_ASCII = 0x01,
+	AT_Print_HEX = 0x02,
+}AT_CMD_enum;
+
 void uart_printf(UART_HandleTypeDef *huart,const char *format, ...);
+void uart_send_IMU_data(AT_CMD_enum at_cmd);
+extern AT_CMD_enum uart_AT_mode;
+extern uint8_t USART1_RX_BUF[512];
 /* USER CODE END Private defines */
 
 void MX_USART1_UART_Init(void);
