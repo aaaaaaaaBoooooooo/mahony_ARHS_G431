@@ -1,7 +1,12 @@
 arhsmodule_g431\angle.o: ..\USER\Angle\angle.c
 arhsmodule_g431\angle.o: ..\USER\Angle\angle.h
-arhsmodule_g431\angle.o: ../Drivers/SYSTEM/delay/delay.h
-arhsmodule_g431\angle.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32G4xx.h
+arhsmodule_g431\angle.o: ../USER/Math_DSP/HANA_math.h
+arhsmodule_g431\angle.o: ../Core/Inc/main.h
+arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h
+arhsmodule_g431\angle.o: ../Core/Inc/stm32g4xx_hal_conf.h
+arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h
+arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h
+arhsmodule_g431\angle.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h
 arhsmodule_g431\angle.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h
 arhsmodule_g431\angle.o: ../Drivers/CMSIS/Include/core_cm4.h
 arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -11,10 +16,6 @@ arhsmodule_g431\angle.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 arhsmodule_g431\angle.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 arhsmodule_g431\angle.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h
-arhsmodule_g431\angle.o: ../Core/Inc/stm32g4xx_hal_conf.h
-arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h
-arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h
-arhsmodule_g431\angle.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
 arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h
@@ -27,6 +28,8 @@ arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h
+arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h
+arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h
@@ -35,9 +38,10 @@ arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h
+arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
+arhsmodule_g431\angle.o: ../Drivers/SYSTEM/delay/delay.h
 arhsmodule_g431\angle.o: ../Drivers/CMSIS/Include/core_cm4.h
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/icm45686_task.h
-arhsmodule_g431\angle.o: ../Core/Inc/main.h
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_driver.h
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_defs.h
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu.h
@@ -45,6 +49,6 @@ arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h
 arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
 arhsmodule_g431\angle.o: ../USER/Math_DSP/filter.h
-arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
-arhsmodule_g431\angle.o: ../USER/Math_DSP/HANA_math.h
 arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/bmm350_task.h
+arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/BMM350/bmm350_defs.h

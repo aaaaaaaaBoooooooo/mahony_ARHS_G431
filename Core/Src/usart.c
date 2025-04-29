@@ -61,6 +61,8 @@ void uart_printf(UART_HandleTypeDef *huart,const char *format, ...)
 }
 
 #include "angle.h"
+#include "icm45686_task.h"
+#include "bmm350_task.h"
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -233,8 +235,7 @@ void uart_send_IMU_data(AT_CMD_enum at_cmd)
 	{
 		//模式1 串口ASCII码打印--满足VOFA+ FireWater格式
 		if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
-			uart_printf(&huart1,"Data:%f,%f,%f,%d,%d,%d,%d,%d,%d,%d\r\n",Angle_Data.roll,Angle_Data.pitch,Angle_Data.yaw,IMU_Data.gyro.x,IMU_Data.gyro.y,IMU_Data.gyro.z,IMU_Data.acc.x,IMU_Data.acc.y,IMU_Data.acc.z,IMU_Data.temperature	);
-	
+			uart_printf(&huart1,"Data:%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\r\n",my_ahrs.Angle_Data.roll,my_ahrs.Angle_Data.pitch,my_ahrs.Angle_Data.yaw,my_ahrs.IMU_Data.gyro.x,my_ahrs.IMU_Data.gyro.y,my_ahrs.IMU_Data.gyro.z,my_ahrs.IMU_Data.acc.x,my_ahrs.IMU_Data.acc.y,my_ahrs.IMU_Data.acc.z,my_ahrs.IMU_Data.temperature,my_MMU.angle.yaw);
 	}
 	else if(at_cmd==AT_Print_HEX)
 	{
@@ -245,15 +246,14 @@ void uart_send_IMU_data(AT_CMD_enum at_cmd)
 		data_buf[1] = 0xA5;
 		
 		/*数据*/
-		memcpy(&data_buf[2],(uint8_t *)&Angle_Data,4*3);
-		memcpy(&data_buf[14],(uint8_t *)&IMU_Data,2*7);
+		memcpy(&data_buf[2],(uint8_t *)&my_ahrs.Angle_Data,4*10);
 		
 		/*帧尾*/
-		data_buf[28] = 0x0D;
-		data_buf[29] = 0x0A;		
+		data_buf[42] = 0x0D;
+		data_buf[43] = 0x0A;		
 		
 		if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
-			HAL_UART_Transmit_DMA(&huart1,data_buf,30);
+			HAL_UART_Transmit_DMA(&huart1,data_buf,44);
 	}
 	else
 	{

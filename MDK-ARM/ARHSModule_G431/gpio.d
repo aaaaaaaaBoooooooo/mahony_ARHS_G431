@@ -27,6 +27,8 @@ arhsmodule_g431\gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h
 arhsmodule_g431\gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h
 arhsmodule_g431\gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h
 arhsmodule_g431\gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h
+arhsmodule_g431\gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h
+arhsmodule_g431\gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h
 arhsmodule_g431\gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 arhsmodule_g431\gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
 arhsmodule_g431\gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h
@@ -43,9 +45,7 @@ arhsmodule_g431\gpio.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h
 arhsmodule_g431\gpio.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h
 arhsmodule_g431\gpio.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
 arhsmodule_g431\gpio.o: ../USER/Angle/angle.h
-arhsmodule_g431\gpio.o: ../Drivers/SYSTEM/delay/delay.h
-arhsmodule_g431\gpio.o: ../Drivers/CMSIS/Include/core_cm4.h
-arhsmodule_g431\gpio.o: ../USER/Math_DSP/filter.h
-arhsmodule_g431\gpio.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
 arhsmodule_g431\gpio.o: ../USER/Math_DSP/HANA_math.h
-arhsmodule_g431\gpio.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+arhsmodule_g431\gpio.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
+arhsmodule_g431\gpio.o: ../Drivers/BSP_HardWare/bmm350_task.h
+arhsmodule_g431\gpio.o: ../Drivers/BSP_HardWare/BMM350/bmm350_defs.h

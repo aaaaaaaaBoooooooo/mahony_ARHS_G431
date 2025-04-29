@@ -26,6 +26,8 @@ arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h
 arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h
 arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h
 arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h
+arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h
+arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h
 arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
 arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h
@@ -35,6 +37,7 @@ arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex
 arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
 arhsmodule_g431\main.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h
 arhsmodule_g431\main.o: ../Core/Inc/dma.h
+arhsmodule_g431\main.o: ../Core/Inc/i2c.h
 arhsmodule_g431\main.o: ../Core/Inc/spi.h
 arhsmodule_g431\main.o: ../Core/Inc/tim.h
 arhsmodule_g431\main.o: ../Core/Inc/usart.h
@@ -52,6 +55,7 @@ arhsmodule_g431\main.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_defs.h
 arhsmodule_g431\main.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu.h
 arhsmodule_g431\main.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h
 arhsmodule_g431\main.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h
+arhsmodule_g431\main.o: ../Drivers/BSP_HardWare/bmm350_task.h
+arhsmodule_g431\main.o: ../Drivers/BSP_HardWare/BMM350/bmm350_defs.h
 arhsmodule_g431\main.o: ../USER/Angle/angle.h
-arhsmodule_g431\main.o: ../USER/Math_DSP/filter.h
 arhsmodule_g431\main.o: ../USER/Math_DSP/HANA_math.h

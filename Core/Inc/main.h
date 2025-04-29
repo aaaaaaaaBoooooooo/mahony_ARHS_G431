@@ -64,6 +64,8 @@ void Error_Handler(void);
 #define IMU1_INT_EXTI_IRQn EXTI4_IRQn
 #define IMU1_CS_Pin GPIO_PIN_0
 #define IMU1_CS_GPIO_Port GPIOB
+#define MAG_INT_Pin GPIO_PIN_10
+#define MAG_INT_GPIO_Port GPIOA
 #define core_LED_Pin GPIO_PIN_11
 #define core_LED_GPIO_Port GPIOA
 #define IMU2_CS_Pin GPIO_PIN_12

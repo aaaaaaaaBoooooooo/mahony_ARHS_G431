@@ -32,7 +32,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   if(htim->Instance == TIM1)//¶¨Ê±Æ÷1ÖÐ¶Ï 1ms
 	{
-		IMU_GetAngle(0.001f);//ARHS×ËÌ¬½âËã
+		IMU_GetAngle(0.001f);//AHRS×ËÌ¬½âËã
+   
 		if(tim1_cnt_2ms >= 2)//500Hz
 		{
 			if(uart_AT_mode == AT_Print_HEX)
@@ -47,7 +48,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		}
 		if(tim1_cnt_500ms >= 500)
 		{
-			LED_TOGGLE;
+      LED_TOGGLE;			
 			tim1_cnt_500ms =0;
 		}		
 		tim1_cnt_2ms++;

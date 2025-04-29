@@ -1,10 +1,10 @@
 Dependencies for Project 'ARHSModule_G431', Target 'ARHSModule_G431': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (startup_stm32g431xx.s)(0x67EA8E07)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 540" --pd "STM32G431xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32g431xx.lst --xref -o arhsmodule_g431\startup_stm32g431xx.o --depend arhsmodule_g431\startup_stm32g431xx.d)
-F (../Core/Src/main.c)(0x67F354AB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\main.o --omf_browse arhsmodule_g431\main.crf --depend arhsmodule_g431\main.d)
-I (../Core/Inc/main.h)(0x67DCD627)
+F (startup_stm32g431xx.s)(0x680DDF80)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 540" --pd "STM32G431xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32g431xx.lst --xref -o arhsmodule_g431\startup_stm32g431xx.o --depend arhsmodule_g431\startup_stm32g431xx.d)
+F (../Core/Src/main.c)(0x681093EF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\main.o --omf_browse arhsmodule_g431\main.crf --depend arhsmodule_g431\main.d)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -28,6 +28,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -37,6 +39,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
 I (../Core/Inc/dma.h)(0x67D7BA39)
+I (../Core/Inc/i2c.h)(0x67FDF3B5)
 I (../Core/Inc/spi.h)(0x67D7BA39)
 I (../Core/Inc/tim.h)(0x67D7BA39)
 I (../Core/Inc/usart.h)(0x67EA949A)
@@ -47,20 +50,21 @@ I (D:\Keil5\ARM\ARMCC\include\stdarg.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (../Core/Inc/gpio.h)(0x67D7BA38)
 I (../Drivers/SYSTEM/delay/delay.h)(0x67D8F419)
-I (../Drivers/BSP_HardWare/icm45686_task.h)(0x67DC1C42)
+I (../Drivers/BSP_HardWare/icm45686_task.h)(0x680F2067)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_driver.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_defs.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h)(0x66E7F0E4)
-I (../USER/Angle/angle.h)(0x67F75B81)
-I (../USER/Math_DSP/filter.h)(0x677FE9DD)
+I (../Drivers/BSP_HardWare/bmm350_task.h)(0x680E27FA)
+I (../Drivers/BSP_HardWare/BMM350/bmm350_defs.h)(0x672A0497)
+I (../USER/Angle/angle.h)(0x68109B09)
 I (../USER/Math_DSP/HANA_math.h)(0x677FDB41)
-F (../Core/Src/gpio.c)(0x67DC1DA4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\gpio.o --omf_browse arhsmodule_g431\gpio.crf --depend arhsmodule_g431\gpio.d)
+F (../Core/Src/gpio.c)(0x680DE0A3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\gpio.o --omf_browse arhsmodule_g431\gpio.crf --depend arhsmodule_g431\gpio.d)
 I (../Core/Inc/gpio.h)(0x67D7BA38)
-I (../Core/Inc/main.h)(0x67DCD627)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -84,6 +88,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -92,24 +98,23 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-I (../Drivers/BSP_HardWare/icm45686_task.h)(0x67DC1C42)
+I (../Drivers/BSP_HardWare/icm45686_task.h)(0x680F2067)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_driver.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_defs.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h)(0x66E7F0E4)
 I (D:\Keil5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
-I (../USER/Angle/angle.h)(0x67F75B81)
-I (../Drivers/SYSTEM/delay/delay.h)(0x67D8F419)
-I (../USER/Math_DSP/filter.h)(0x677FE9DD)
-I (D:\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
+I (../USER/Angle/angle.h)(0x68109B09)
 I (../USER/Math_DSP/HANA_math.h)(0x677FDB41)
-I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
-F (../Core/Src/dma.c)(0x67DC0D9B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\dma.o --omf_browse arhsmodule_g431\dma.crf --depend arhsmodule_g431\dma.d)
+I (D:\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
+I (../Drivers/BSP_HardWare/bmm350_task.h)(0x680E27FA)
+I (../Drivers/BSP_HardWare/BMM350/bmm350_defs.h)(0x672A0497)
+F (../Core/Src/dma.c)(0x67FE5FD6)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\dma.o --omf_browse arhsmodule_g431\dma.crf --depend arhsmodule_g431\dma.d)
 I (../Core/Inc/dma.h)(0x67D7BA39)
-I (../Core/Inc/main.h)(0x67DCD627)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -133,6 +138,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -141,11 +148,49 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Core/Src/spi.c)(0x67DC1650)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\spi.o --omf_browse arhsmodule_g431\spi.crf --depend arhsmodule_g431\spi.d)
+F (../Core/Src/i2c.c)(0x67FE5FD6)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\i2c.o --omf_browse arhsmodule_g431\i2c.crf --depend arhsmodule_g431\i2c.d)
+I (../Core/Inc/i2c.h)(0x67FDF3B5)
+I (../Core/Inc/main.h)(0x680DDF7F)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x67D7BA19)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x67D7BA31)
+I (D:\Keil5\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
+F (../Core/Src/spi.c)(0x67DC1650)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\spi.o --omf_browse arhsmodule_g431\spi.crf --depend arhsmodule_g431\spi.d)
 I (../Core/Inc/spi.h)(0x67D7BA39)
-I (../Core/Inc/main.h)(0x67DCD627)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -169,6 +214,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -177,11 +224,11 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Core/Src/tim.c)(0x67EA8FB1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\tim.o --omf_browse arhsmodule_g431\tim.crf --depend arhsmodule_g431\tim.d)
+F (../Core/Src/tim.c)(0x6810A385)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\tim.o --omf_browse arhsmodule_g431\tim.crf --depend arhsmodule_g431\tim.d)
 I (../Core/Inc/tim.h)(0x67D7BA39)
-I (../Core/Inc/main.h)(0x67DCD627)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -205,6 +252,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -219,21 +268,19 @@ I (D:\Keil5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\stdarg.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
-I (../Drivers/BSP_HardWare/icm45686_task.h)(0x67DC1C42)
+I (../Drivers/BSP_HardWare/icm45686_task.h)(0x680F2067)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_driver.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_defs.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h)(0x66E7F0E4)
-I (../USER/Angle/angle.h)(0x67F75B81)
-I (../Drivers/SYSTEM/delay/delay.h)(0x67D8F419)
-I (../USER/Math_DSP/filter.h)(0x677FE9DD)
+I (../USER/Angle/angle.h)(0x68109B09)
 I (../USER/Math_DSP/HANA_math.h)(0x677FDB41)
-F (../Core/Src/usart.c)(0x67F75E2B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\usart.o --omf_browse arhsmodule_g431\usart.crf --depend arhsmodule_g431\usart.d)
+F (../Core/Src/usart.c)(0x6810A327)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\usart.o --omf_browse arhsmodule_g431\usart.crf --depend arhsmodule_g431\usart.d)
 I (../Core/Inc/usart.h)(0x67EA949A)
-I (../Core/Inc/main.h)(0x67DCD627)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -257,6 +304,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -270,20 +319,20 @@ I (D:\Keil5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\stdarg.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
-I (../USER/Angle/angle.h)(0x67F75B81)
-I (../Drivers/SYSTEM/delay/delay.h)(0x67D8F419)
-I (../Drivers/BSP_HardWare/icm45686_task.h)(0x67DC1C42)
+I (../USER/Angle/angle.h)(0x68109B09)
+I (../USER/Math_DSP/HANA_math.h)(0x677FDB41)
+I (../Drivers/BSP_HardWare/icm45686_task.h)(0x680F2067)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_driver.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_defs.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h)(0x66E7F0E4)
-I (../USER/Math_DSP/filter.h)(0x677FE9DD)
-I (../USER/Math_DSP/HANA_math.h)(0x677FDB41)
-F (../Core/Src/stm32g4xx_it.c)(0x67EA949A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_it.o --omf_browse arhsmodule_g431\stm32g4xx_it.crf --depend arhsmodule_g431\stm32g4xx_it.d)
-I (../Core/Inc/main.h)(0x67DCD627)
+I (../Drivers/BSP_HardWare/bmm350_task.h)(0x680E27FA)
+I (../Drivers/BSP_HardWare/BMM350/bmm350_defs.h)(0x672A0497)
+F (../Core/Src/stm32g4xx_it.c)(0x680DDF7F)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_it.o --omf_browse arhsmodule_g431\stm32g4xx_it.crf --depend arhsmodule_g431\stm32g4xx_it.d)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -307,6 +356,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -315,17 +366,17 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_it.h)(0x67DC12CC)
+I (../Core/Inc/stm32g4xx_it.h)(0x680DDF7F)
 I (../Core/Inc/usart.h)(0x67EA949A)
 I (D:\Keil5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\stdarg.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
-F (../Core/Src/stm32g4xx_hal_msp.c)(0x67DC0D9B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_msp.o --omf_browse arhsmodule_g431\stm32g4xx_hal_msp.crf --depend arhsmodule_g431\stm32g4xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x67DCD627)
+F (../Core/Src/stm32g4xx_hal_msp.c)(0x67DC0D9B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_msp.o --omf_browse arhsmodule_g431\stm32g4xx_hal_msp.crf --depend arhsmodule_g431\stm32g4xx_hal_msp.d)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -349,6 +400,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -357,9 +410,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_spi.o --omf_browse arhsmodule_g431\stm32g4xx_hal_spi.crf --depend arhsmodule_g431\stm32g4xx_hal_spi.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_i2c.o --omf_browse arhsmodule_g431\stm32g4xx_hal_i2c.crf --depend arhsmodule_g431\stm32g4xx_hal_i2c.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -383,6 +436,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -391,9 +446,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_spi_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_spi_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_spi_ex.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_i2c_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_i2c_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_i2c_ex.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -417,6 +472,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -425,9 +482,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal.o --omf_browse arhsmodule_g431\stm32g4xx_hal.crf --depend arhsmodule_g431\stm32g4xx_hal.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal.o --omf_browse arhsmodule_g431\stm32g4xx_hal.crf --depend arhsmodule_g431\stm32g4xx_hal.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -451,6 +508,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -459,9 +518,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_rcc.o --omf_browse arhsmodule_g431\stm32g4xx_hal_rcc.crf --depend arhsmodule_g431\stm32g4xx_hal_rcc.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_rcc.o --omf_browse arhsmodule_g431\stm32g4xx_hal_rcc.crf --depend arhsmodule_g431\stm32g4xx_hal_rcc.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -485,6 +544,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -493,9 +554,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_rcc_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_rcc_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_rcc_ex.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_rcc_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_rcc_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_rcc_ex.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -519,6 +580,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -527,9 +590,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_flash.o --omf_browse arhsmodule_g431\stm32g4xx_hal_flash.crf --depend arhsmodule_g431\stm32g4xx_hal_flash.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_flash.o --omf_browse arhsmodule_g431\stm32g4xx_hal_flash.crf --depend arhsmodule_g431\stm32g4xx_hal_flash.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -553,6 +616,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -561,9 +626,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_flash_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_flash_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_flash_ex.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_flash_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_flash_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_flash_ex.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -587,6 +652,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -595,9 +662,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_flash_ramfunc.o --omf_browse arhsmodule_g431\stm32g4xx_hal_flash_ramfunc.crf --depend arhsmodule_g431\stm32g4xx_hal_flash_ramfunc.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_flash_ramfunc.o --omf_browse arhsmodule_g431\stm32g4xx_hal_flash_ramfunc.crf --depend arhsmodule_g431\stm32g4xx_hal_flash_ramfunc.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -621,6 +688,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -629,9 +698,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_gpio.o --omf_browse arhsmodule_g431\stm32g4xx_hal_gpio.crf --depend arhsmodule_g431\stm32g4xx_hal_gpio.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_gpio.o --omf_browse arhsmodule_g431\stm32g4xx_hal_gpio.crf --depend arhsmodule_g431\stm32g4xx_hal_gpio.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -655,6 +724,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -663,9 +734,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_exti.o --omf_browse arhsmodule_g431\stm32g4xx_hal_exti.crf --depend arhsmodule_g431\stm32g4xx_hal_exti.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_exti.o --omf_browse arhsmodule_g431\stm32g4xx_hal_exti.crf --depend arhsmodule_g431\stm32g4xx_hal_exti.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -689,6 +760,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -697,9 +770,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_dma.o --omf_browse arhsmodule_g431\stm32g4xx_hal_dma.crf --depend arhsmodule_g431\stm32g4xx_hal_dma.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_dma.o --omf_browse arhsmodule_g431\stm32g4xx_hal_dma.crf --depend arhsmodule_g431\stm32g4xx_hal_dma.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -723,6 +796,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -731,9 +806,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_dma_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_dma_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_dma_ex.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_dma_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_dma_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_dma_ex.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -757,6 +832,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -765,9 +842,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_pwr.o --omf_browse arhsmodule_g431\stm32g4xx_hal_pwr.crf --depend arhsmodule_g431\stm32g4xx_hal_pwr.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_pwr.o --omf_browse arhsmodule_g431\stm32g4xx_hal_pwr.crf --depend arhsmodule_g431\stm32g4xx_hal_pwr.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -791,6 +868,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -799,9 +878,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_pwr_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_pwr_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_pwr_ex.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_pwr_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_pwr_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_pwr_ex.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -825,6 +904,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -833,9 +914,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_cortex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_cortex.crf --depend arhsmodule_g431\stm32g4xx_hal_cortex.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_cortex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_cortex.crf --depend arhsmodule_g431\stm32g4xx_hal_cortex.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -859,6 +940,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -867,9 +950,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_tim.o --omf_browse arhsmodule_g431\stm32g4xx_hal_tim.crf --depend arhsmodule_g431\stm32g4xx_hal_tim.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_spi.o --omf_browse arhsmodule_g431\stm32g4xx_hal_spi.crf --depend arhsmodule_g431\stm32g4xx_hal_spi.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -893,6 +976,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -901,9 +986,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_tim_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_tim_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_tim_ex.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_spi_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_spi_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_spi_ex.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -927,6 +1012,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -935,9 +1022,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_uart.o --omf_browse arhsmodule_g431\stm32g4xx_hal_uart.crf --depend arhsmodule_g431\stm32g4xx_hal_uart.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_tim.o --omf_browse arhsmodule_g431\stm32g4xx_hal_tim.crf --depend arhsmodule_g431\stm32g4xx_hal_tim.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -961,6 +1048,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -969,9 +1058,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_uart_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_uart_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_uart_ex.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_tim_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_tim_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_tim_ex.d)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -995,6 +1084,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -1003,7 +1094,79 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (../Core/Src/system_stm32g4xx.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\system_stm32g4xx.o --omf_browse arhsmodule_g431\system_stm32g4xx.crf --depend arhsmodule_g431\system_stm32g4xx.d)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_uart.o --omf_browse arhsmodule_g431\stm32g4xx_hal_uart.crf --depend arhsmodule_g431\stm32g4xx_hal_uart.d)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x67D7BA19)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x67D7BA31)
+I (D:\Keil5\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\stm32g4xx_hal_uart_ex.o --omf_browse arhsmodule_g431\stm32g4xx_hal_uart_ex.crf --depend arhsmodule_g431\stm32g4xx_hal_uart_ex.d)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x67D7BA19)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x67D7BA31)
+I (D:\Keil5\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
+F (../Core/Src/system_stm32g4xx.c)(0x67D7BA31)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\system_stm32g4xx.o --omf_browse arhsmodule_g431\system_stm32g4xx.crf --depend arhsmodule_g431\system_stm32g4xx.d)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x67D7BA19)
@@ -1014,7 +1177,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x67D7BA19)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x67D7BA19)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x67D7BA31)
@@ -1029,6 +1192,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -1037,7 +1202,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (..\Drivers\BSP_HardWare\icm45686\imu\inv_imu_driver.c)(0x67DCD5DC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\inv_imu_driver.o --omf_browse arhsmodule_g431\inv_imu_driver.crf --depend arhsmodule_g431\inv_imu_driver.d)
+F (..\Drivers\BSP_HardWare\icm45686\imu\inv_imu_driver.c)(0x67DCD5DC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\inv_imu_driver.o --omf_browse arhsmodule_g431\inv_imu_driver.crf --depend arhsmodule_g431\inv_imu_driver.d)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_driver.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_defs.h)(0x66E7F0E4)
 I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
@@ -1046,17 +1211,17 @@ I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h)(0x66E7F0E4)
 I (D:\Keil5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_version.h)(0x66E7F0E4)
-F (..\Drivers\BSP_HardWare\icm45686\imu\inv_imu_transport.c)(0x66E7F0E4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\inv_imu_transport.o --omf_browse arhsmodule_g431\inv_imu_transport.crf --depend arhsmodule_g431\inv_imu_transport.d)
+F (..\Drivers\BSP_HardWare\icm45686\imu\inv_imu_transport.c)(0x66E7F0E4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\inv_imu_transport.o --omf_browse arhsmodule_g431\inv_imu_transport.crf --depend arhsmodule_g431\inv_imu_transport.d)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h)(0x66E7F0E4)
 I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_defs.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h)(0x66E7F0E4)
-F (..\Drivers\BSP_HardWare\icm45686_task.c)(0x67DC1C42)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\icm45686_task.o --omf_browse arhsmodule_g431\icm45686_task.crf --depend arhsmodule_g431\icm45686_task.d)
-I (..\Drivers\BSP_HardWare\icm45686_task.h)(0x67DC1C42)
-I (../Core/Inc/main.h)(0x67DCD627)
+F (..\Drivers\BSP_HardWare\icm45686_task.c)(0x68105446)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\icm45686_task.o --omf_browse arhsmodule_g431\icm45686_task.crf --depend arhsmodule_g431\icm45686_task.d)
+I (..\Drivers\BSP_HardWare\icm45686_task.h)(0x680F2067)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -1080,6 +1245,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -1097,7 +1264,66 @@ I (D:\Keil5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
 I (../Drivers/SYSTEM/delay/delay.h)(0x67D8F419)
 I (../Core/Inc/spi.h)(0x67D7BA39)
 I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
-F (..\Drivers\SYSTEM\delay\delay.c)(0x677FABDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\delay.o --omf_browse arhsmodule_g431\delay.crf --depend arhsmodule_g431\delay.d)
+F (..\Drivers\BSP_HardWare\bmm350_task.c)(0x680F8657)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\bmm350_task.o --omf_browse arhsmodule_g431\bmm350_task.crf --depend arhsmodule_g431\bmm350_task.d)
+I (..\Drivers\BSP_HardWare\bmm350_task.h)(0x680E27FA)
+I (../Core/Inc/main.h)(0x680DDF7F)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x67D7BA19)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x67D7BA19)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x67D7BA31)
+I (D:\Keil5\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
+I (../Drivers/BSP_HardWare/BMM350/bmm350_defs.h)(0x672A0497)
+I (../Drivers/BSP_HardWare/BMM350/bmm350.h)(0x672A0497)
+I (../Core/Inc/i2c.h)(0x67FDF3B5)
+I (D:\Keil5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (../Drivers/SYSTEM/delay/delay.h)(0x67D8F419)
+F (..\Drivers\BSP_HardWare\BMM350\bmm350.c)(0x680DDEC8)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\bmm350.o --omf_browse arhsmodule_g431\bmm350.crf --depend arhsmodule_g431\bmm350.d)
+I (..\Drivers\BSP_HardWare\BMM350\bmm350.h)(0x672A0497)
+I (..\Drivers\BSP_HardWare\BMM350\bmm350_defs.h)(0x672A0497)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (D:\Keil5\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
+I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\Keil5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+F (..\Drivers\BSP_HardWare\BMM350\bmm350_oor.c)(0x672A0497)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\bmm350_oor.o --omf_browse arhsmodule_g431\bmm350_oor.crf --depend arhsmodule_g431\bmm350_oor.d)
+I (..\Drivers\BSP_HardWare\BMM350\bmm350_oor.h)(0x672A0497)
+I (D:\Keil5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (D:\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
+I (..\Drivers\BSP_HardWare\BMM350\bmm350.h)(0x672A0497)
+I (..\Drivers\BSP_HardWare\BMM350\bmm350_defs.h)(0x672A0497)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (D:\Keil5\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
+F (..\Drivers\SYSTEM\delay\delay.c)(0x677FABDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\delay.o --omf_browse arhsmodule_g431\delay.crf --depend arhsmodule_g431\delay.d)
 I (../Drivers/SYSTEM/sys/sys.h)(0x67D8F419)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32G4xx.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x67D7BA31)
@@ -1109,7 +1335,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x67D7BA19)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x67D7BA19)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x67D7BA31)
@@ -1124,6 +1350,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -1133,10 +1361,15 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
 I (..\Drivers\SYSTEM\delay\delay.h)(0x67D8F419)
-F (..\USER\Angle\angle.c)(0x67F77FCD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\angle.o --omf_browse arhsmodule_g431\angle.crf --depend arhsmodule_g431\angle.d)
-I (..\USER\Angle\angle.h)(0x67F75B81)
-I (../Drivers/SYSTEM/delay/delay.h)(0x67D8F419)
-I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32G4xx.h)(0x67D7BA31)
+F (..\USER\Angle\angle.c)(0x6810A1E0)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\angle.o --omf_browse arhsmodule_g431\angle.crf --depend arhsmodule_g431\angle.d)
+I (..\USER\Angle\angle.h)(0x68109B09)
+I (../USER/Math_DSP/HANA_math.h)(0x677FDB41)
+I (../Core/Inc/main.h)(0x680DDF7F)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x67D7BA19)
 I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
@@ -1145,10 +1378,6 @@ I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x67D7BA19)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x67D7BA19)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x67D7BA19)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x67D7BA31)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
-I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x67D7BA31)
 I (D:\Keil5\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x67D7BA31)
@@ -1161,6 +1390,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -1169,27 +1400,28 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-I (../Drivers/BSP_HardWare/icm45686_task.h)(0x67DC1C42)
-I (../Core/Inc/main.h)(0x67DCD627)
+I (D:\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
+I (../Drivers/SYSTEM/delay/delay.h)(0x67D8F419)
+I (../Drivers/BSP_HardWare/icm45686_task.h)(0x680F2067)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_driver.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_defs.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h)(0x66E7F0E4)
 I (../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h)(0x66E7F0E4)
 I (D:\Keil5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
-I (../USER/Math_DSP/filter.h)(0x677FE9DD)
-I (D:\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
-I (../USER/Math_DSP/HANA_math.h)(0x677FDB41)
+I (../USER/Math_DSP/filter.h)(0x680DF467)
 I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
-F (..\USER\Math_DSP\filter.c)(0x677FDC76)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\filter.o --omf_browse arhsmodule_g431\filter.crf --depend arhsmodule_g431\filter.d)
-I (..\USER\Math_DSP\filter.h)(0x677FE9DD)
+I (../Drivers/BSP_HardWare/bmm350_task.h)(0x680E27FA)
+I (../Drivers/BSP_HardWare/BMM350/bmm350_defs.h)(0x672A0497)
+F (..\USER\Math_DSP\filter.c)(0x680DF47B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\filter.o --omf_browse arhsmodule_g431\filter.crf --depend arhsmodule_g431\filter.d)
+I (..\USER\Math_DSP\filter.h)(0x680DF467)
 I (D:\Keil5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
 I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
 I (..\USER\Math_DSP\HANA_math.h)(0x677FDB41)
-I (../Core/Inc/main.h)(0x67DCD627)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -1212,6 +1444,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)
@@ -1220,11 +1454,11 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x67D7BA31)
-F (..\USER\Math_DSP\HANA_math.c)(0x677FEB4A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\hana_math.o --omf_browse arhsmodule_g431\hana_math.crf --depend arhsmodule_g431\hana_math.d)
+F (..\USER\Math_DSP\HANA_math.c)(0x677FEB4A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP_HardWare -I ../Drivers/SYSTEM/delay -I ../Drivers/SYSTEM/sys -I ../Drivers/BSP_HardWare/icm45686/imu -I ../Drivers/BSP_HardWare/icm45686 -I ../USER/Angle -I ../USER/Math_DSP -I ../Drivers/BSP_HardWare/BMM350-I.\RTE\_ARHSModule_G431-ID:\Keil5_pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include-ID:\Keil5_pack\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="540" -DSTM32G431xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G431xx-o arhsmodule_g431\hana_math.o --omf_browse arhsmodule_g431\hana_math.crf --depend arhsmodule_g431\hana_math.d)
 I (..\USER\Math_DSP\HANA_math.h)(0x677FDB41)
-I (../Core/Inc/main.h)(0x67DCD627)
+I (../Core/Inc/main.h)(0x680DDF7F)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x67D7BA31)
-I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67DC0D9B)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x67FDF3B6)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x67D7BA31)
 I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x67D7BA31)
@@ -1248,6 +1482,8 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h)(0x67D7BA31)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x67D7BA31)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x67D7BA31)

@@ -7,18 +7,7 @@
 #define PI 3.1415927f
 #define Moving_Len  10
 ////////////////////////////////////////
-
-//¨°??¡Á?¡§???¨¹??2¡§?a??
-typedef struct 
-{
-	float LastP;
-	float Now_P;
-	float out;
-	float Kg;
-	float Q;
-	float R;	
-}kalman_1_struct;
-
+//¿¨¶ûÂüÂË²¨Æ÷
 typedef struct{
 	float x;
 	float p;
@@ -29,13 +18,13 @@ typedef struct{
 	float gain;
 }kalman1_state;
 
-extern float kalman_1(kalman_1_struct *ekf,float input);  //¨°????¡§???¨¹
+
 void kalman1_init(kalman1_state *state, float init_x, float init_p);
 float kalman1_filter(kalman1_state *state, float z_measure);
 
 ///////////////////////////////////////////////////////////////////////////////////
-//?D?¦Ì??2¡§
-extern int16_t MovMiddle(int16_t input);
+//»¬¶¯¾ùÖµÂË²¨Æ÷
+int16_t MovMiddle(int16_t input);
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -45,8 +34,8 @@ typedef struct{
 		float new_data;
 		float factor;
 }Filter_LPF_1;
-extern float LPF_1_Filter_1(Filter_LPF_1 *LPF_1);
-extern float LPF_1_Filter_2(Filter_LPF_1 *LPF_1,float dt);
+float LPF_1_Filter_1(Filter_LPF_1 *LPF_1);
+float LPF_1_Filter_2(Filter_LPF_1 *LPF_1,float dt);
 
 
 typedef struct {
@@ -58,11 +47,11 @@ typedef struct {
 	uint8_t max_cnt;
 }MovAverage;
 
-
+//¿¹¸ÉÈÅĞÍ»¬¶¯¾ùÖµÂË²¨Æ÷
 int16_t AntiPulse_MovingAverage_Filter(MovAverage *_MovAverage);
 
 
-
+//¾ùÖµÂË²¨Æ÷
 short Moving_filter(short data);
 ///////////////////////////////////////////////////////////////////////////////////
 #endif

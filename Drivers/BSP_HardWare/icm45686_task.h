@@ -1,5 +1,5 @@
-#ifndef _icm42688_h_
-#define _icm42688_h_
+#ifndef _ICM45686_TASK_H_
+#define _ICM45686_TASK_H_
 
 #include "main.h"
 #include "inv_imu_driver.h"
@@ -28,6 +28,7 @@ typedef struct
 	int16_t acc_y;
 	int16_t acc_z;
 	int16_t temp;
+
 }IMUDATA_TypeDef;
 
 int imu_init(ICM45686_TypeDef *imu);

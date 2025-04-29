@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "bmm350_task.h": "c",
+        "filter.h": "c",
+        "angle.h": "c",
+        "cmath": "c"
+    }
+}

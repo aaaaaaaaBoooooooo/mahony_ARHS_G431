@@ -2,20 +2,6 @@
 #include "HANA_math.h"
 ////////////////////////////////////////////////////
 
-
-
- //Ò»Î¬¿¨¶ûÂü
-float kalman_1(kalman_1_struct *ekf,float input) 
-{
-	ekf->Now_P = ekf->LastP + ekf->Q;
-	ekf->Kg = ekf->Now_P / (ekf->Now_P + ekf->R);
-	ekf->out = ekf->out + ekf->Kg * (input - ekf->out);
-	ekf->LastP = (1-ekf->Kg) * ekf->Now_P ;
-	return ekf->out;
-}
-
-
-
 //Ò»Î¬¿¨¶ûÂüÂË²¨³õÊ¼»¯
 void kalman1_init(kalman1_state *state, float init_x, float init_p)
 {

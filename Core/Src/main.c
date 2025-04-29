@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "dma.h"
+#include "i2c.h"
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
@@ -28,6 +29,7 @@
 /* USER CODE BEGIN Includes */
 #include "delay.h"
 #include "icm45686_task.h"
+#include "bmm350_task.h"
 #include "angle.h"
 /* USER CODE END Includes */
 
@@ -60,7 +62,9 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+		uint8_t reg_addr = BMM350_REG_MAG_X_XLSB;	
+		uint8_t daddr;
+		uint8_t reg_data[14];
 /* USER CODE END 0 */
 
 /**
@@ -97,6 +101,7 @@ int main(void)
   MX_SPI3_Init();
   MX_USART1_UART_Init();
   MX_TIM1_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 	LED(1);//点亮LED
 	if(imu_init(&myIMU1) == INV_IMU_OK &&imu_init(&myIMU2) == INV_IMU_OK)
@@ -114,7 +119,18 @@ int main(void)
 			delay_ms(50);
 		}
 	}
-	
+	if(mmu_init()==0)
+	{
+		
+	}
+	else
+	{
+		while(1)//错误 led闪烁20Hz
+		{
+			LED_TOGGLE;
+			delay_ms(50);
+		}		
+	}
 	HAL_TIM_Base_Start_IT(&htim1);
 	HAL_UARTEx_ReceiveToIdle_DMA(&huart1,USART1_RX_BUF,sizeof(USART1_RX_BUF));
   /* USER CODE END 2 */
@@ -123,6 +139,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+#ifdef USE_MMU    
+    /***使用磁力计***/ 
+		mmu_angle_update();//磁力计数据更新	
+#endif
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

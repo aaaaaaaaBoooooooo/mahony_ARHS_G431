@@ -27,6 +27,8 @@ arhsmodule_g431\hana_math.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_e
 arhsmodule_g431\hana_math.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h
 arhsmodule_g431\hana_math.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h
 arhsmodule_g431\hana_math.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h
+arhsmodule_g431\hana_math.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c.h
+arhsmodule_g431\hana_math.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_i2c_ex.h
 arhsmodule_g431\hana_math.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 arhsmodule_g431\hana_math.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
 arhsmodule_g431\hana_math.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h

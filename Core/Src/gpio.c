@@ -24,6 +24,7 @@
 /* USER CODE BEGIN 0 */
 #include "icm45686_task.h"
 #include "angle.h"
+#include "bmm350_task.h"
 /*外部中断传感器数据更新*/
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
@@ -34,6 +35,10 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		{
 			IMU_DataUpdate();
 		}
+	}
+	else if(GPIO_Pin == MAG_INT_Pin)//磁力计中断有bug，不使用
+	{
+		//mmu_data_update();
 	}
 }
 /* USER CODE END 0 */
@@ -82,9 +87,15 @@ void MX_GPIO_Init(void)
   HAL_GPIO_Init(IMU1_CS_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
+  GPIO_InitStruct.Pin = MAG_INT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(MAG_INT_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = core_LED_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(core_LED_GPIO_Port, &GPIO_InitStruct);
 

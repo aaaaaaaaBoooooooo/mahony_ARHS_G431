@@ -141,7 +141,7 @@ int imu_init(ICM45686_TypeDef *imu)
 	/* Set power modes */
 	rc |= inv_imu_set_accel_mode(&imu->dev, PWR_MGMT0_ACCEL_MODE_LN);
 	rc |= inv_imu_set_gyro_mode(&imu->dev, PWR_MGMT0_GYRO_MODE_LN);
-
+	delay_ms(2000);//延时2s等待IMU稳定
 	return rc;
 }
 /*获取两个IMU数据并合成为一个数据*/
