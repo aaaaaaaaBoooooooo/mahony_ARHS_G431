@@ -45,7 +45,5 @@ arhsmodule_g431\gpio.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h
 arhsmodule_g431\gpio.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h
 arhsmodule_g431\gpio.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
 arhsmodule_g431\gpio.o: ../USER/Angle/angle.h
-arhsmodule_g431\gpio.o: ../USER/Math_DSP/HANA_math.h
-arhsmodule_g431\gpio.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
 arhsmodule_g431\gpio.o: ../Drivers/BSP_HardWare/bmm350_task.h
 arhsmodule_g431\gpio.o: ../Drivers/BSP_HardWare/BMM350/bmm350_defs.h

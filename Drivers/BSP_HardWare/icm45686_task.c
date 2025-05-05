@@ -63,6 +63,7 @@ void si_sleep_us(uint32_t us)
 }
 
 /* Initializes IMU device and apply configuration. */
+#define IMU_NUM 100  
 int imu_init(ICM45686_TypeDef *imu)
 {
 	int                      rc     = 0;
@@ -142,6 +143,81 @@ int imu_init(ICM45686_TypeDef *imu)
 	rc |= inv_imu_set_accel_mode(&imu->dev, PWR_MGMT0_ACCEL_MODE_LN);
 	rc |= inv_imu_set_gyro_mode(&imu->dev, PWR_MGMT0_GYRO_MODE_LN);
 	delay_ms(2000);//延时2s等待IMU稳定
+
+	/***获取IMU的陀螺仪、加速度计静态方差和角速度零偏*/
+	uint16_t i=0;
+	float gyro_x[IMU_NUM],gyro_y[IMU_NUM],gyro_z[IMU_NUM];//角速度计原始数据
+	float acc_x[IMU_NUM],acc_y[IMU_NUM],acc_z[IMU_NUM];//加速度计原始数据
+
+	do
+	{
+		/****数据清零begin****/
+		imu->gyro_avg[0] = 0;
+		imu->gyro_avg[1] = 0;
+		imu->gyro_avg[2] = 0;
+		imu->gyro_var[0] = 0;
+		imu->gyro_var[1] = 0;
+		imu->gyro_var[2] = 0;
+		imu->acc_avg[0] = 0;
+		imu->acc_avg[1] = 0;
+		imu->acc_avg[2] = 0;
+		imu->acc_var[0] = 0;
+		imu->acc_var[1] = 0;
+		imu->acc_var[2] = 0;
+		/****数据清零end****/
+		
+		for(i=0; i<IMU_NUM; i++)//采集陀螺仪数据计算均值
+		{
+
+			/***获取原始数据***/
+			inv_imu_get_register_data(&imu->dev, &imu->data);
+			gyro_x[i] = imu->data.gyro_data[0];
+			gyro_y[i] = imu->data.gyro_data[1];
+			gyro_z[i] = imu->data.gyro_data[2];
+			acc_x[i] = imu->data.accel_data[0];
+			acc_y[i] = imu->data.accel_data[1];
+			acc_z[i] = imu->data.accel_data[2];
+			/***累加求和***/
+			imu->gyro_avg[0] += gyro_x[i];
+			imu->gyro_avg[1] += gyro_y[i];
+			imu->gyro_avg[2] += gyro_z[i];
+			imu->acc_avg[0] += acc_x[i];
+			imu->acc_avg[1] += acc_y[i];
+			imu->acc_avg[2] += acc_z[i];
+
+			delay_ms(1);//根据解算频率，设置采样率为1KHz
+			
+		}
+		/***求平均***/
+		imu->gyro_avg[0] = imu->gyro_avg[0]/IMU_NUM;
+		imu->gyro_avg[1] = imu->gyro_avg[1]/IMU_NUM;
+		imu->gyro_avg[2] = imu->gyro_avg[2]/IMU_NUM;
+		imu->acc_avg[0] = imu->acc_avg[0]/IMU_NUM;
+		imu->acc_avg[1] = imu->acc_avg[1]/IMU_NUM;
+		imu->acc_avg[2] = imu->acc_avg[2]/IMU_NUM;
+
+
+		/***计算方差 *确保校准的时候是静止状态的，同时获得传感器测量噪声水平***/
+		for(i=0; i<IMU_NUM; i++)
+		{
+			imu->gyro_var[0] += (float) (1.0f/(IMU_NUM-1)) * (gyro_x[i] - imu->gyro_avg[0]) * (gyro_x[i] - imu->gyro_avg[0]);
+			imu->gyro_var[1] += (float) (1.0f/(IMU_NUM-1)) * (gyro_y[i] - imu->gyro_avg[1]) * (gyro_y[i] - imu->gyro_avg[1]);
+			imu->gyro_var[2] += (float)	(1.0f/(IMU_NUM-1)) * (gyro_z[i] - imu->gyro_avg[2]) * (gyro_z[i] - imu->gyro_avg[2]);
+			imu->acc_var[0] += (float) (1.0f/(IMU_NUM-1)) * (acc_x[i] - imu->acc_avg[0]) * (acc_x[i] - imu->acc_avg[0]);
+			imu->acc_var[1] += (float) (1.0f/(IMU_NUM-1)) * (acc_y[i] - imu->acc_avg[1]) * (acc_y[i] - imu->acc_avg[1]);
+			imu->acc_var[2] += (float)	(1.0f/(IMU_NUM-1)) * (acc_z[i] - imu->acc_avg[2]) * (acc_z[i] - imu->acc_avg[2]);
+		}
+	
+
+		/***判断并保存静止时的零偏***/
+		if( imu->gyro_var[0]<50 && imu->gyro_var[1]<50 && imu->gyro_var[2]<50&&imu->acc_var[0]<100 && imu->acc_var[1]<100 &&imu->acc_var[2]<100)//方差足够小
+		{
+			break;//退出循环
+		}   
+		delay_ms(1000);//不是静止状态，延时等待稳定
+	}while(1);
+
+
 	return rc;
 }
 /*获取两个IMU数据并合成为一个数据*/
@@ -151,13 +227,21 @@ void icm45686_data_update(void)
 	inv_imu_get_register_data(&myIMU1.dev, &myIMU1.data);
 	inv_imu_get_register_data(&myIMU2.dev, &myIMU2.data);
 	
-	myIMU_data.acc_x = (myIMU1.data.accel_data[0] - myIMU2.data.accel_data[0])>>1;
-	myIMU_data.acc_y = (myIMU1.data.accel_data[1] - myIMU2.data.accel_data[1])>>1;
-	myIMU_data.acc_z = (myIMU1.data.accel_data[2] + myIMU2.data.accel_data[2])>>1;
-	
-	myIMU_data.gyro_x = (myIMU1.data.gyro_data[0] - myIMU2.data.gyro_data[0])>>1;
-	myIMU_data.gyro_y = (myIMU1.data.gyro_data[1] - myIMU2.data.gyro_data[1])>>1;
-	myIMU_data.gyro_z = (myIMU1.data.gyro_data[2] + myIMU2.data.gyro_data[2])>>1;	
-	
+	/***角速度零漂处理***/
+	myIMU1.data.gyro_data[0] -= myIMU1.gyro_avg[0];//去零偏处理
+	myIMU1.data.gyro_data[1] -= myIMU1.gyro_avg[1];//去零偏处理	
+	myIMU1.data.gyro_data[2] -= myIMU1.gyro_avg[2];//去零偏处理
+	myIMU2.data.gyro_data[0] -= myIMU2.gyro_avg[0];//去零偏处理
+	myIMU2.data.gyro_data[1] -= myIMU2.gyro_avg[1];//去零偏处理
+	myIMU2.data.gyro_data[2] -= myIMU2.gyro_avg[2];//去零偏处理
+	/***数据融合***/
+	myIMU_data.acc_x =(myIMU2.acc_var[0]*(float)myIMU1.data.accel_data[0] - myIMU1.acc_var[0]*(float)myIMU2.data.accel_data[0])/(myIMU1.acc_var[0]+myIMU2.acc_var[0]);
+	myIMU_data.acc_y =(myIMU2.acc_var[1]*(float)myIMU1.data.accel_data[1] - myIMU1.acc_var[1]*(float)myIMU2.data.accel_data[1])/(myIMU1.acc_var[1]+myIMU2.acc_var[1]);
+	myIMU_data.acc_z =(myIMU2.acc_var[2]*(float)myIMU1.data.accel_data[2] + myIMU1.acc_var[2]*(float)myIMU2.data.accel_data[2])/(myIMU1.acc_var[2]+myIMU2.acc_var[2]);
+
+	myIMU_data.gyro_x =(myIMU2.gyro_var[0]*(float)myIMU1.data.gyro_data[0] - myIMU1.gyro_var[0]*(float)myIMU2.data.gyro_data[0])/(myIMU1.gyro_var[0]+myIMU2.gyro_var[0]);
+	myIMU_data.gyro_y =(myIMU2.gyro_var[1]*(float)myIMU1.data.gyro_data[1] - myIMU1.gyro_var[1]*(float)myIMU2.data.gyro_data[1])/(myIMU1.gyro_var[1]+myIMU2.gyro_var[1]);
+	myIMU_data.gyro_z =(myIMU2.gyro_var[2]*(float)myIMU1.data.gyro_data[2] + myIMU1.gyro_var[2]*(float)myIMU2.data.gyro_data[2])/(myIMU1.gyro_var[2]+myIMU2.gyro_var[2]);
+
 	myIMU_data.temp = (myIMU1.data.temp_data + myIMU2.data.temp_data)>>1;	
 }

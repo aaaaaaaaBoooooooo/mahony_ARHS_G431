@@ -119,6 +119,7 @@ int main(void)
 			delay_ms(50);
 		}
 	}
+#ifdef USE_MMU 
 	if(mmu_init()==0)
 	{
 		
@@ -131,6 +132,7 @@ int main(void)
 			delay_ms(50);
 		}		
 	}
+#endif
 	HAL_TIM_Base_Start_IT(&htim1);
 	HAL_UARTEx_ReceiveToIdle_DMA(&huart1,USART1_RX_BUF,sizeof(USART1_RX_BUF));
   /* USER CODE END 2 */

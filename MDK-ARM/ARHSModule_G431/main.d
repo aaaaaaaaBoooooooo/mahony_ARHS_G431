@@ -58,4 +58,3 @@ arhsmodule_g431\main.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h
 arhsmodule_g431\main.o: ../Drivers/BSP_HardWare/bmm350_task.h
 arhsmodule_g431\main.o: ../Drivers/BSP_HardWare/BMM350/bmm350_defs.h
 arhsmodule_g431\main.o: ../USER/Angle/angle.h
-arhsmodule_g431\main.o: ../USER/Math_DSP/HANA_math.h

@@ -50,4 +50,3 @@ arhsmodule_g431\tim.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu.h
 arhsmodule_g431\tim.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.h
 arhsmodule_g431\tim.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h
 arhsmodule_g431\tim.o: ../USER/Angle/angle.h
-arhsmodule_g431\tim.o: ../USER/Math_DSP/HANA_math.h

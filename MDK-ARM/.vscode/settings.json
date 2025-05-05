@@ -3,6 +3,8 @@
         "bmm350_task.h": "c",
         "filter.h": "c",
         "angle.h": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "oscilloscope.h": "c",
+        "touch_task.h": "c"
     }
 }

@@ -226,7 +226,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 
 uint8_t USART1_RX_BUF[512];
 
-AT_CMD_enum uart_AT_mode = AT_Print_HEX;//默认打印ASCII
+AT_CMD_enum uart_AT_mode = AT_Print_HEX;//默认打印模式
 uint8_t data_buf[50];
 void uart_send_IMU_data(AT_CMD_enum at_cmd)
 {
@@ -246,7 +246,8 @@ void uart_send_IMU_data(AT_CMD_enum at_cmd)
 		data_buf[1] = 0xA5;
 		
 		/*数据*/
-		memcpy(&data_buf[2],(uint8_t *)&my_ahrs.Angle_Data,4*10);
+		memcpy(&data_buf[2],(uint8_t *)&my_ahrs.Angle_Data,4*3);
+		memcpy(&data_buf[14],(uint8_t *)&my_ahrs.IMU_Data,4*7);
 		
 		/*帧尾*/
 		data_buf[42] = 0x0D;

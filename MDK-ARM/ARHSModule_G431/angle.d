@@ -1,6 +1,5 @@
 arhsmodule_g431\angle.o: ..\USER\Angle\angle.c
 arhsmodule_g431\angle.o: ..\USER\Angle\angle.h
-arhsmodule_g431\angle.o: ../USER/Math_DSP/HANA_math.h
 arhsmodule_g431\angle.o: ../Core/Inc/main.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h
 arhsmodule_g431\angle.o: ../Core/Inc/stm32g4xx_hal_conf.h
@@ -38,7 +37,6 @@ arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
 arhsmodule_g431\angle.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h
-arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
 arhsmodule_g431\angle.o: ../Drivers/SYSTEM/delay/delay.h
 arhsmodule_g431\angle.o: ../Drivers/CMSIS/Include/core_cm4.h
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/icm45686_task.h
@@ -49,6 +47,8 @@ arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_regmap_le.
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/icm45686/imu/inv_imu_transport.h
 arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
 arhsmodule_g431\angle.o: ../USER/Math_DSP/filter.h
+arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
+arhsmodule_g431\angle.o: ../USER/Math_DSP/HANA_math.h
 arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/bmm350_task.h
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/BMM350/bmm350_defs.h

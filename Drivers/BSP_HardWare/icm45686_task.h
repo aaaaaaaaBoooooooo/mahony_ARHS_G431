@@ -16,6 +16,10 @@ typedef struct
 {
 	inv_imu_device_t dev;//器件
 	inv_imu_sensor_data_t data;//数据
+	float gyro_var[3];//陀螺仪测量方差
+	float acc_var[3];//加速度计测量方差
+	float gyro_avg[3];//陀螺仪静态均值
+	float acc_avg[3];//加速度静态均值
 	uint8_t is_init_ok;
 }ICM45686_TypeDef;
 /*惯性数据结构体*/
