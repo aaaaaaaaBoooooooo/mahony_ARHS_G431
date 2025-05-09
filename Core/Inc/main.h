@@ -70,11 +70,13 @@ void Error_Handler(void);
 #define core_LED_GPIO_Port GPIOA
 #define IMU2_CS_Pin GPIO_PIN_12
 #define IMU2_CS_GPIO_Port GPIOA
+#define DRDY_Pin GPIO_PIN_15
+#define DRDY_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 #define LED_TOGGLE HAL_GPIO_TogglePin(core_LED_GPIO_Port,core_LED_Pin)
 #define LED(x) HAL_GPIO_WritePin(core_LED_GPIO_Port,core_LED_Pin,(GPIO_PinState)x)
-
+#define DRDY_TOGGLE HAL_GPIO_TogglePin(DRDY_GPIO_Port,DRDY_Pin)
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

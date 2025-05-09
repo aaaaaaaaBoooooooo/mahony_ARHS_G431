@@ -1,8 +1,8 @@
 /********************************Copyright (c)**********************************`
-** æ–‡ä»¶åç§°: angle.h
-** åˆ›å»ºäººå‘˜: aBo
-** åˆ›å»ºæ—¥æœŸ: 2025-1-09
-** æ–‡æ¡£æè¿°: é™€èºä»ªå§¿æ€è§£ç®—ç›¸å…³å‡½æ•°å£°æ˜
+** ÎÄ¼şÃû³Æ: angle.h
+** ´´½¨ÈËÔ±: aBo
+** ´´½¨ÈÕÆÚ: 2025-1-09
+** ÎÄµµÃèÊö: ÍÓÂİÒÇ×ËÌ¬½âËãÏà¹Øº¯ÊıÉùÃ÷
 ********************************End of Head************************************/
 
  
@@ -11,26 +11,26 @@
 
 
 
-/*å¤´æ–‡ï¿½?----------------------------------------------------------------------*/
+/*Í·ÎÄ¼ş----------------------------------------------------------------------*/
 #include "main.h"
-/*å®å®šä¹‰-----------------------------------------------------------------------*/
-#define RadtoDeg    	57.29578f				//å¼§åº¦åˆ°è§’åº¦ (å¼§åº¦ * 180/3.1415926)
-#define DegtoRad    	0.0174533f				//è§’åº¦åˆ°å¼§åº¦ (è§’åº¦ * 3.1415/180)
-#define Acc_Gain  		0.0004883f				//åŠ é€Ÿåº¦å˜æˆG (åˆå§‹åŒ–åŠ é€Ÿåº¦æ»¡é‡ç¨‹-+16g			LSB = 2*16/65536.0)
-#define Gyro_Gain 		0.0610352f				//è§’é€Ÿåº¦å˜æˆåº¦dps (åˆå§‹åŒ–é™€èºä»ªæ»¡é‡ç¨‹+-2000Â°/s	LSB = 2*2000/65536.0)
+/*ºê¶¨Òå-----------------------------------------------------------------------*/
+#define RadtoDeg    	57.29578f				//»¡¶Èµ½½Ç¶È (»¡¶È * 180/3.1415926)
+#define DegtoRad    	0.0174533f				//½Ç¶Èµ½»¡¶È (½Ç¶È * 3.1415/180)
+#define Acc_Gain  		0.0004883f				//¼ÓËÙ¶È±ä³ÉG (³õÊ¼»¯¼ÓËÙ¶ÈÂúÁ¿³Ì-+16g			LSB = 2*16/65536.0)
+#define Gyro_Gain 		0.0610352f				//½ÇËÙ¶È±ä³É¶Èdps (³õÊ¼»¯ÍÓÂİÒÇÂúÁ¿³Ì+-2000¡ã/s	LSB = 2*2000/65536.0)
 
-#define Gyro_Gr	    	0.0010641f			  	//è§’é€Ÿåº¦å˜æˆå¼§åº¦(3.1415/180 * LSBg) 
-#define VAR_GyX				0.05f		            //é™€èºä»ªXè½´é™æ€æ–¹å·®é˜ˆå€¼   
-#define VAR_GyY				0.05f		            //é™€èºä»ªYè½´é™æ€æ–¹å·®é˜ˆå€¼   
-#define VAR_GyZ				0.05f		            //é™€èºä»ªZè½´é™æ€æ–¹å·®é˜ˆå€¼   
-#define VAR_AcX				0.001f		            //åŠ é€Ÿåº¦è®¡Xè½´é™æ€æ–¹å·®é˜ˆå€¼   
-#define VAR_AcY				0.001f		            //åŠ é€Ÿåº¦è®¡Yè½´é™æ€æ–¹å·®é˜ˆå€¼   
-#define VAR_AcZ				0.001f		            //åŠ é€Ÿåº¦è®¡Zè½´é™æ€æ–¹å·®é˜ˆå€¼
+#define Gyro_Gr	    	0.0010641f			  	//½ÇËÙ¶È±ä³É»¡¶È(3.1415/180 * LSBg) 
+#define VAR_GyX				0.05f		            //ÍÓÂİÒÇXÖá¾²Ì¬·½²îãĞÖµ   
+#define VAR_GyY				0.05f		            //ÍÓÂİÒÇYÖá¾²Ì¬·½²îãĞÖµ   
+#define VAR_GyZ				0.05f		            //ÍÓÂİÒÇZÖá¾²Ì¬·½²îãĞÖµ   
+#define VAR_AcX				0.01f		            //¼ÓËÙ¶È¼ÆXÖá¾²Ì¬·½²îãĞÖµ   
+#define VAR_AcY				0.01f		            //¼ÓËÙ¶È¼ÆYÖá¾²Ì¬·½²îãĞÖµ   
+#define VAR_AcZ				0.01f		            //¼ÓËÙ¶È¼ÆZÖá¾²Ì¬·½²îãĞÖµ
 
 
-#define Dynamic_PI	//ä½¿èƒ½åŠ¨æ€PIç³»æ•°
-#define SIX_CAL		//ä½¿èƒ½6é¢æ ¡å‡†
-//#define USE_MMU     //ä½¿èƒ½ç£åŠ›è®¡
+#define Dynamic_PI	//Ê¹ÄÜ¶¯Ì¬PIÏµÊı
+#define SIX_CAL		//Ê¹ÄÜ6ÃæĞ£×¼
+//#define USE_MMU     //Ê¹ÄÜ´ÅÁ¦¼Æ
 
 
 typedef struct
@@ -52,49 +52,49 @@ typedef volatile struct {
   float q1;
   float q2;
   float q3;
-} Quaternion;//å››å…ƒæ•°
+} Quaternion;//ËÄÔªÊı
 
 typedef struct{
-	vector3float_t gyro;// è§’é€Ÿåº¦
-	vector3float_t acc;// åŠ é€Ÿåº¦
-	float temperature;//æ¸©åº¦
-	vector3float_t mag;// ç£åœºå¼ºåº¦
+	vector3float_t gyro;// ½ÇËÙ¶È
+	vector3float_t acc;// ¼ÓËÙ¶È
+	float temperature;//ÎÂ¶È
+	vector3float_t mag;// ´Å³¡Ç¿¶È
 
-	vector3float_t gyro_offset;//é™€èºä»ªé›¶å
-	float acc_static_value;//åŠ é€Ÿåº¦è®¡é™æ€æ¨¡å€¼ï¼ˆé‡åŠ›åŠ é€Ÿåº¦ï¼‰
-	vector3float_t acc_Scale_K;//åŠ é€Ÿåº¦è®¡æ ‡å®šç³»æ•°
-	vector3float_t acc_offset;//åŠ é€Ÿåº¦è®¡é›¶å
-	vector3float_t mag_offset;//ç£åŠ›è®¡é›¶å
+	vector3float_t gyro_offset;//ÍÓÂİÒÇÁãÆ«
+	float acc_static_value;//¼ÓËÙ¶È¼Æ¾²Ì¬Ä£Öµ£¨ÖØÁ¦¼ÓËÙ¶È£©
+	vector3float_t acc_Scale_K;//¼ÓËÙ¶È¼Æ±ê¶¨ÏµÊı
+	vector3float_t acc_offset;//¼ÓËÙ¶È¼ÆÁãÆ«
+	vector3float_t mag_offset;//´ÅÁ¦¼ÆÁãÆ«
 
-	vector3float_t gyro_var;//é™€èºä»ªæµ‹é‡æ–¹å·®
-	vector3float_t acc_var;//åŠ é€Ÿåº¦è®¡æµ‹é‡æ–¹å·®
+	vector3float_t gyro_var;//ÍÓÂİÒÇ²âÁ¿·½²î
+	vector3float_t acc_var;//¼ÓËÙ¶È¼Æ²âÁ¿·½²î
 
 	
-}IMU_DATA_TypeDef;//å¤„ç†åçš„IMUæ•°æ®
+}IMU_DATA_TypeDef;//´¦ÀíºóµÄIMUÊı¾İ
 
 typedef struct{
 	float roll;
 	float pitch;
 	float yaw;
-}Angle_DATA_TypeDef;//æ¬§æ‹‰è§’å§¿æ€æ•°æ®
+}Angle_DATA_TypeDef;//Å·À­½Ç×ËÌ¬Êı¾İ
 
 typedef struct{
-	IMU_DATA_TypeDef IMU_Data;//å¤„ç†åçš„IMUæ•°æ®
-	Angle_DATA_TypeDef Angle_Data;//å§¿æ€è§£ç®—æ¬§æ‹‰è§’åº¦æ•°æ®
-	Quaternion NumQ ;//å››å…ƒæ•°
+	IMU_DATA_TypeDef IMU_Data;//´¦ÀíºóµÄIMUÊı¾İ
+	Angle_DATA_TypeDef Angle_Data;//×ËÌ¬½âËãÅ·À­½Ç¶ÈÊı¾İ
+	Quaternion NumQ ;//ËÄÔªÊı
 	uint8_t is_init_success;
-}AHRS_TypeDef;//AHRSè§£ç®—æ•°æ®
+}AHRS_TypeDef;//AHRS½âËãÊı¾İ
 
 extern  AHRS_TypeDef my_ahrs;
 
 
-/*å‡½æ•°å£°æ˜*/
-void IMU_Calibration(void);//é›¶æ¼‚çŸ«æ­£
-void IMU_DataUpdate(void);//æ•°æ®æ›´æ–°
-void IMU_GetAngle(float dt);//å§¿æ€è§£ç®—
+/*º¯ÊıÉùÃ÷*/
+void IMU_Calibration(void);//ÁãÆ¯½ÃÕı
+void IMU_DataUpdate(void);//Êı¾İ¸üĞÂ
+void IMU_GetAngle(float dt);//×ËÌ¬½âËã
 
 #ifdef USE_MMU
-/*****ä½¿ç”¨ç£åŠ›è®¡è§£ç®—èˆªå‘è§’*****/
+/*****Ê¹ÓÃ´ÅÁ¦¼Æ½âËãº½Ïò½Ç*****/
 void mmu_angle_update(void);
 #endif
 /********************************End of File************************************/

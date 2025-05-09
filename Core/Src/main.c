@@ -31,6 +31,7 @@
 #include "icm45686_task.h"
 #include "bmm350_task.h"
 #include "angle.h"
+#include "stmflash.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -62,9 +63,10 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-		uint8_t reg_addr = BMM350_REG_MAG_X_XLSB;	
-		uint8_t daddr;
-		uint8_t reg_data[14];
+void flash_param_read()
+{
+  stmflash_read(FLASH_ADDR_BASE,(uint64_t *)&my_at_cmd.uart_print_mode,1);//读取AT指令模式
+}
 /* USER CODE END 0 */
 
 /**
@@ -133,8 +135,10 @@ int main(void)
 		}		
 	}
 #endif
+  flash_param_read();//读取AT指令模式
 	HAL_TIM_Base_Start_IT(&htim1);
 	HAL_UARTEx_ReceiveToIdle_DMA(&huart1,USART1_RX_BUF,sizeof(USART1_RX_BUF));
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

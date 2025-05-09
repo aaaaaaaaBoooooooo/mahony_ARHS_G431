@@ -40,15 +40,25 @@ extern "C" {
 extern UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN Private defines */
-typedef enum
+
+#define	AT_Print_ASCII  0x0001  //数据输出字符格式
+#define	AT_Print_HEX  0x0002		//数据输出16进制格式
+#define AT_USE_MMU 0x0003				//使用磁力计
+#define AT_NOT_MMU 0x0004				//关闭磁力计
+#define AT_USE_INT 0x0005				//使用中断引脚
+#define AT_NOT_INT 0x0006				//关闭中断引脚
+
+typedef struct
 {
-	AT_Print_ASCII = 0x01,
-	AT_Print_HEX = 0x02,
-}AT_CMD_enum;
+	uint32_t uart_print_mode; //数据打印模式
+	uint32_t mmu_mode; //磁力计模式
+	uint32_t int_pin_mode;	//中断引脚模式
+}AT_CMD_MODE_TypeDef;
+
 
 void uart_printf(UART_HandleTypeDef *huart,const char *format, ...);
-void uart_send_IMU_data(AT_CMD_enum at_cmd);
-extern AT_CMD_enum uart_AT_mode;
+void uart_send_IMU_data(uint16_t at_cmd);
+extern AT_CMD_MODE_TypeDef my_at_cmd;
 extern uint8_t USART1_RX_BUF[512];
 /* USER CODE END Private defines */
 

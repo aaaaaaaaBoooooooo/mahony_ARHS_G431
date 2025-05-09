@@ -37,6 +37,7 @@
 "arhsmodule_g431\bmm350_task.o"
 "arhsmodule_g431\bmm350.o"
 "arhsmodule_g431\bmm350_oor.o"
+"arhsmodule_g431\stmflash.o"
 "arhsmodule_g431\delay.o"
 "arhsmodule_g431\angle.o"
 "arhsmodule_g431\filter.o"

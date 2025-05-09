@@ -63,6 +63,7 @@ void uart_printf(UART_HandleTypeDef *huart,const char *format, ...)
 #include "angle.h"
 #include "icm45686_task.h"
 #include "bmm350_task.h"
+#include "stmflash.h"
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -185,7 +186,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     __HAL_LINKDMA(uartHandle,hdmatx,hdma_usart1_tx);
 
     /* USART1 interrupt Init */
-    HAL_NVIC_SetPriority(USART1_IRQn, 3, 1);
+    HAL_NVIC_SetPriority(USART1_IRQn, 5, 1);
     HAL_NVIC_EnableIRQ(USART1_IRQn);
   /* USER CODE BEGIN USART1_MspInit 1 */
 
@@ -226,9 +227,9 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 
 uint8_t USART1_RX_BUF[512];
 
-AT_CMD_enum uart_AT_mode = AT_Print_HEX;//默认打印模式
+
 uint8_t data_buf[50];
-void uart_send_IMU_data(AT_CMD_enum at_cmd)
+void uart_send_IMU_data(uint16_t at_cmd)
 {
 
 	if(at_cmd==AT_Print_ASCII)
@@ -262,8 +263,17 @@ void uart_send_IMU_data(AT_CMD_enum at_cmd)
 	}
 }
 
+
+AT_CMD_MODE_TypeDef my_at_cmd;
+void uart_AT_CMD_Init()
+{
+	my_at_cmd.uart_print_mode = AT_Print_HEX;//初始默认16进制打印
+	my_at_cmd.mmu_mode = AT_NOT_MMU;//初始默认不使用磁力计
+	my_at_cmd.int_pin_mode = AT_NOT_INT;//初始默认不使用中断
+}
 void uart_AT_cmd_decoder(uint8_t * data,uint16_t size)
 {
+
 	if(data[0] == 'A'&&data[1] == 'T'&&data[size-1]==0x0A)
 	{
 		/***确认为AT指令***/
@@ -272,10 +282,14 @@ void uart_AT_cmd_decoder(uint8_t * data,uint16_t size)
 			switch(data[3])
 			{
 				case '1':
-					uart_AT_mode = AT_Print_ASCII;
+					my_at_cmd.uart_print_mode = AT_Print_ASCII;
+
+          stmflash_write(FLASH_ADDR_BASE,(uint64_t*)&my_at_cmd.uart_print_mode,1);//写入FLASH
 					break;
 				case '2':
-					uart_AT_mode = AT_Print_HEX;
+					my_at_cmd.uart_print_mode = AT_Print_HEX;
+
+          stmflash_write(FLASH_ADDR_BASE,(uint64_t*)&my_at_cmd.uart_print_mode,1);//写入FLASH
 					break;
 			}
 		}

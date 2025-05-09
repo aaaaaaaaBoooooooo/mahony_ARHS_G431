@@ -315,7 +315,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>3</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -747,6 +747,11 @@
               <FileName>bmm350_oor.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP_HardWare\BMM350\bmm350_oor.c</FilePath>
+            </File>
+            <File>
+              <FileName>stmflash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP_HardWare\stmflash.c</FilePath>
             </File>
           </Files>
         </Group>

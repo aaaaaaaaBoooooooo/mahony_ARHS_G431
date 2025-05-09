@@ -33,19 +33,19 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   if(htim->Instance == TIM1)//定时器1中断 1ms
 	{
 		IMU_GetAngle(0.001f);//AHRS姿态解算
-   
+		DRDY_TOGGLE;
 		if(tim1_cnt_2ms >= 2)//500Hz
 		{
-			if(uart_AT_mode == AT_Print_HEX)
+			if(my_at_cmd.uart_print_mode == AT_Print_HEX)
 				//uart_printf(&huart1,"%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",myIMU1.data.gyro_data[0],myIMU1.data.gyro_data[1],myIMU1.data.gyro_data[2],-myIMU2.data.gyro_data[0],-myIMU2.data.gyro_data[1],myIMU2.data.gyro_data[2],myIMU_data.gyro_x,myIMU_data.gyro_y,myIMU_data.gyro_z,myIMU_data.acc_x,myIMU_data.acc_y,myIMU_data.acc_z);
 				//uart_printf(&huart1,"%f,%f,%f,%f,%f,%f\n",my_ahrs.Angle_Data.roll,my_ahrs.Angle_Data.pitch,my_ahrs.Angle_Data.yaw,my_ahrs.IMU_Data.gyro.x,my_ahrs.IMU_Data.gyro.y,my_ahrs.IMU_Data.gyro.z);
-        uart_send_IMU_data(uart_AT_mode);
+        uart_send_IMU_data(my_at_cmd.uart_print_mode);
 				tim1_cnt_2ms =0;
 		}		
 		if(tim1_cnt_5ms >= 5)//200Hz
 		{
-			if(uart_AT_mode == AT_Print_ASCII)
-				uart_send_IMU_data(uart_AT_mode);
+			if(my_at_cmd.uart_print_mode == AT_Print_ASCII)
+				uart_send_IMU_data(my_at_cmd.uart_print_mode);
 				tim1_cnt_5ms =0;
 		}
 		if(tim1_cnt_500ms >= 500)
