@@ -52,3 +52,6 @@ arhsmodule_g431\angle.o: ../USER/Math_DSP/HANA_math.h
 arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/bmm350_task.h
 arhsmodule_g431\angle.o: ../Drivers/BSP_HardWare/BMM350/bmm350_defs.h
+arhsmodule_g431\angle.o: ../Core/Inc/usart.h
+arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+arhsmodule_g431\angle.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdarg.h

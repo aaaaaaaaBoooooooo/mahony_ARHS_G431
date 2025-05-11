@@ -23,7 +23,7 @@
 #include "HANA_math.h"
 #include "stdio.h"
 #include "bmm350_task.h" 
-
+#include "usart.h"
 #define Gyro_NUM	500 // 角速度采样个数  视MCU内存大小修改(由于正态分布具有随机性，不建议少于50)
 #define Acc_NUM   100 // 加速度采样个数	视MCU内存大小修改(由于正态分布具有随机性，不建议少于50)
 
@@ -359,17 +359,29 @@ void IMU_GetAngle(float dt)
 #ifdef USE_MMU
 static uint8_t mmu_yaw_init_flag = 0; //磁力计初始化标志位
 		/*****使用磁力计 *****/	
-		if(my_MMU.is_init_ok==1&&my_MMU.angle.yaw!=0.0f&&mmu_yaw_init_flag==0)//磁力计初始化成功
+		if(my_at_cmd.mmu_mode)
 		{
-			my_ahrs.Angle_Data.yaw = my_MMU.angle.yaw; //使用磁力计的偏航角初始化航向
-			mmu_yaw_init_flag = 1;
+			if(my_MMU.is_init_ok==1&&my_MMU.angle.yaw!=0.0f&&mmu_yaw_init_flag==0)//磁力计初始化成功
+			{
+				my_ahrs.Angle_Data.yaw = my_MMU.angle.yaw; //使用磁力计的偏航角初始化航向
+				mmu_yaw_init_flag = 1;
+			}
+			my_ahrs.Angle_Data.yaw  += Gyro.z*RadtoDeg* dt;//角速度积分成偏航角
+			/***偏航角映射为0~360与磁力计兼容***/
+			if(my_ahrs.Angle_Data.yaw>360.0f)
+					my_ahrs.Angle_Data.yaw -= 360.0f;
+			else if(my_ahrs.Angle_Data.yaw<0.0f)
+					my_ahrs.Angle_Data.yaw += 360.0f;
 		}
-		my_ahrs.Angle_Data.yaw  += Gyro.z*RadtoDeg* dt;//角速度积分成偏航角
-		/***偏航角映射为0~360与磁力计兼容***/
-		if(my_ahrs.Angle_Data.yaw>360.0f)
-				my_ahrs.Angle_Data.yaw -= 360.0f;
-		else if(my_ahrs.Angle_Data.yaw<0.0f)
-				my_ahrs.Angle_Data.yaw += 360.0f;
+		else
+		{
+			if(fabs(Gyro.z) > 0.01f) //数据太小可以认为是干扰，不是偏航动作
+			{
+				/*****不使用磁力计*****/
+				my_ahrs.Angle_Data.yaw  += Gyro.z*RadtoDeg* dt;//角速度积分成偏航角		
+		
+			} 			
+		}
 
 #else
 	if(fabs(Gyro.z) > 0.01f) //数据太小可以认为是干扰，不是偏航动作
@@ -389,41 +401,48 @@ void mmu_angle_update()
 {
 	float Mzx = 0.0f, Mzy = 0.0f;
 	uint8_t rslt = 0;
-	/*磁力计数据更新*/
-	rslt = mmu_data_update();
-	if(rslt==BMM350_OK)
+	if(my_at_cmd.mmu_mode)
 	{
-		/*磁力计水平偏转补偿*/
-		Mzx = cosf(my_ahrs.Angle_Data.roll*DegtoRad)*my_MMU.Data.x 
-					+ sinf(my_ahrs.Angle_Data.roll*DegtoRad)*sinf(my_ahrs.Angle_Data.pitch*DegtoRad)*my_MMU.Data.y
-					+ sinf(my_ahrs.Angle_Data.roll*DegtoRad)*cosf(my_ahrs.Angle_Data.pitch*DegtoRad)*my_MMU.Data.z;
-		
-		Mzy = cosf(my_ahrs.Angle_Data.pitch*DegtoRad)*my_MMU.Data.y - sinf(my_ahrs.Angle_Data.pitch*DegtoRad)*my_MMU.Data.z;
-		/*磁力计航向角计算 0~360*/
-		my_MMU.angle.yaw = 180.0f+atan2f(Mzy,Mzx)*RadtoDeg;
-		/*磁力计航向角与陀螺仪航向角融合互补滤波*/
-		if(fabs(my_ahrs.Angle_Data.roll)<10.0f&&fabs(my_ahrs.Angle_Data.pitch)<10.0f)//水平状态下融合
+		/*磁力计数据更新*/
+		rslt = mmu_data_update();
+		if(rslt==BMM350_OK)
 		{
-			if(fabs(my_MMU.angle.yaw-my_ahrs.Angle_Data.yaw)>350.0f)//如果磁力计航向角与陀螺仪航向角差值大于350度，说明磁力计数据在360和0之间跳变了
+			/*磁力计水平偏转补偿*/
+			Mzx = cosf(my_ahrs.Angle_Data.roll*DegtoRad)*my_MMU.Data.x 
+						+ sinf(my_ahrs.Angle_Data.roll*DegtoRad)*sinf(my_ahrs.Angle_Data.pitch*DegtoRad)*my_MMU.Data.y
+						+ sinf(my_ahrs.Angle_Data.roll*DegtoRad)*cosf(my_ahrs.Angle_Data.pitch*DegtoRad)*my_MMU.Data.z;
+			
+			Mzy = cosf(my_ahrs.Angle_Data.pitch*DegtoRad)*my_MMU.Data.y - sinf(my_ahrs.Angle_Data.pitch*DegtoRad)*my_MMU.Data.z;
+			/*磁力计航向角计算 0~360*/
+			my_MMU.angle.yaw = 180.0f+atan2f(Mzy,Mzx)*RadtoDeg;
+			/*磁力计航向角与陀螺仪航向角融合互补滤波*/
+			if(fabs(my_ahrs.Angle_Data.roll)<10.0f&&fabs(my_ahrs.Angle_Data.pitch)<10.0f)//水平状态下融合
 			{
-				my_ahrs.Angle_Data.yaw = my_MMU.angle.yaw;//直接使用磁力计数据
+				if(fabs(my_MMU.angle.yaw-my_ahrs.Angle_Data.yaw)>350.0f)//如果磁力计航向角与陀螺仪航向角差值大于350度，说明磁力计数据在360和0之间跳变了
+				{
+					my_ahrs.Angle_Data.yaw = my_MMU.angle.yaw;//直接使用磁力计数据
+				}
+				else/*磁力计航向角与陀螺仪航向角差值小于350度，说明磁力计数据正常*/
+				{
+					my_ahrs.Angle_Data.yaw += (my_MMU.angle.yaw-my_ahrs.Angle_Data.yaw)*0.1f;
+				}
 			}
-			else/*磁力计航向角与陀螺仪航向角差值小于350度，说明磁力计数据正常*/
+			else//倾斜状态下融合
 			{
-				my_ahrs.Angle_Data.yaw += (my_MMU.angle.yaw-my_ahrs.Angle_Data.yaw)*0.1f;
+				if(fabs(my_MMU.angle.yaw-my_ahrs.Angle_Data.yaw)>350.0f)//如果磁力计航向角与陀螺仪航向角差值大于350度，说明磁力计数据在360和0之间跳变了
+				{
+					my_ahrs.Angle_Data.yaw = my_MMU.angle.yaw;//直接使用磁力计数据
+				}
+				else/*磁力计航向角与陀螺仪航向角差值小于350度，说明磁力计数据正常*/
+				{
+					my_ahrs.Angle_Data.yaw += (my_MMU.angle.yaw-my_ahrs.Angle_Data.yaw)*0.01f;
+				}
+
 			}
 		}
-		else//倾斜状态下融合
+		else
 		{
-			if(fabs(my_MMU.angle.yaw-my_ahrs.Angle_Data.yaw)>350.0f)//如果磁力计航向角与陀螺仪航向角差值大于350度，说明磁力计数据在360和0之间跳变了
-			{
-				my_ahrs.Angle_Data.yaw = my_MMU.angle.yaw;//直接使用磁力计数据
-			}
-			else/*磁力计航向角与陀螺仪航向角差值小于350度，说明磁力计数据正常*/
-			{
-				my_ahrs.Angle_Data.yaw += (my_MMU.angle.yaw-my_ahrs.Angle_Data.yaw)*0.01f;
-			}
-
+			return;
 		}
 	}
 	else

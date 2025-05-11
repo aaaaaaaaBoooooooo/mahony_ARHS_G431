@@ -5,6 +5,7 @@
         "angle.h": "c",
         "cmath": "c",
         "oscilloscope.h": "c",
-        "touch_task.h": "c"
+        "touch_task.h": "c",
+        "usart.h": "c"
     }
 }

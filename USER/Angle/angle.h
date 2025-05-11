@@ -30,7 +30,7 @@
 
 #define Dynamic_PI	//使能动态PI系数
 #define SIX_CAL		//使能6面校准
-//#define USE_MMU     //使能磁力计
+#define USE_MMU     //使能磁力计
 
 
 typedef struct

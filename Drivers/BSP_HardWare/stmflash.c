@@ -27,7 +27,7 @@ uint8_t stmflash_erase_page(uint16_t start_page_sn, uint8_t len, uint8_t bank)
   uint32_t err;
   uint8_t ret;
   FLASH_EraseInitTypeDef EraseInitStruct;
-  uint8_t flash_count=0;
+//  uint8_t flash_count=0;
   
   EraseInitStruct.TypeErase   = FLASH_TYPEERASE_PAGES;    //É¾³ý·½Ê½
   EraseInitStruct.Page        = start_page_sn;            //³¬Ê¼Ò³ºÅ

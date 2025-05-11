@@ -77,6 +77,7 @@ void Error_Handler(void);
 #define LED_TOGGLE HAL_GPIO_TogglePin(core_LED_GPIO_Port,core_LED_Pin)
 #define LED(x) HAL_GPIO_WritePin(core_LED_GPIO_Port,core_LED_Pin,(GPIO_PinState)x)
 #define DRDY_TOGGLE HAL_GPIO_TogglePin(DRDY_GPIO_Port,DRDY_Pin)
+#define DRDY(x) HAL_GPIO_WritePin(DRDY_GPIO_Port,DRDY_Pin,(GPIO_PinState)x)
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

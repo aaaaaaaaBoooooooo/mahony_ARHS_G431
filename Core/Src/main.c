@@ -65,7 +65,16 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 void flash_param_read()
 {
-  stmflash_read(FLASH_ADDR_BASE,(uint64_t *)&my_at_cmd.uart_print_mode,1);//读取AT指令模式
+  stmflash_read(FLASH_ADDR_BASE,(uint64_t *)&flash_data_store,1);//读取FLASH
+	if(flash_data_store == 0xFFFFFFFF)
+	{
+		flash_data_store = 0;
+		stmflash_write(FLASH_ADDR_BASE,(uint64_t*)&flash_data_store,1);//写入FLASH初始化
+	}
+  my_at_cmd.uart_print_mode = (flash_data_store & 0x0000000F);//数据打印模式
+  my_at_cmd.mmu_mode = (flash_data_store & 0x00000010)>>4;//磁力计模式
+  my_at_cmd.int_pin_mode = (flash_data_store & 0x00000020)>>5;//中断引脚模式
+
 }
 /* USER CODE END 0 */
 
@@ -106,6 +115,8 @@ int main(void)
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 	LED(1);//点亮LED
+  flash_param_read();//读取AT指令模式
+	HAL_UARTEx_ReceiveToIdle_DMA(&huart1,USART1_RX_BUF,sizeof(USART1_RX_BUF));
 	if(imu_init(&myIMU1) == INV_IMU_OK &&imu_init(&myIMU2) == INV_IMU_OK)
 	{
 		IMU_Calibration();//IMU静止状态下零漂矫正
@@ -122,22 +133,25 @@ int main(void)
 		}
 	}
 #ifdef USE_MMU 
-	if(mmu_init()==0)
-	{
-		
-	}
-	else
-	{
-		while(1)//错误 led闪烁20Hz
-		{
-			LED_TOGGLE;
-			delay_ms(50);
-		}		
-	}
+  if(my_at_cmd.mmu_mode)
+  {
+    if(mmu_init()==0)
+    {
+      
+    }
+    else
+    {
+      while(1)//错误 led闪烁20Hz
+      {
+        LED_TOGGLE;
+        delay_ms(50);
+      }		
+    }
+  }
+
 #endif
-  flash_param_read();//读取AT指令模式
+  
 	HAL_TIM_Base_Start_IT(&htim1);
-	HAL_UARTEx_ReceiveToIdle_DMA(&huart1,USART1_RX_BUF,sizeof(USART1_RX_BUF));
 
   /* USER CODE END 2 */
 
@@ -147,7 +161,10 @@ int main(void)
   {
 #ifdef USE_MMU    
     /***使用磁力计***/ 
-		mmu_angle_update();//磁力计数据更新	
+    if(my_at_cmd.mmu_mode)
+    {    
+		  mmu_angle_update();//磁力计数据更新	
+    }
 #endif
     /* USER CODE END WHILE */
 

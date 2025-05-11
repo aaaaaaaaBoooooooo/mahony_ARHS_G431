@@ -64,6 +64,7 @@ void uart_printf(UART_HandleTypeDef *huart,const char *format, ...)
 #include "icm45686_task.h"
 #include "bmm350_task.h"
 #include "stmflash.h"
+#include "string.h"
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -229,77 +230,296 @@ uint8_t USART1_RX_BUF[512];
 
 
 uint8_t data_buf[50];
-void uart_send_IMU_data(uint16_t at_cmd)
+UART_IMU_DATA_PRINT_TypeDef my_uartIMUdata;
+void uart_send_IMU_data()
 {
+	static uint32_t time_1ms_cnt = 0;
+	time_1ms_cnt++;//计时
+  my_uartIMUdata.roll += my_ahrs.Angle_Data.roll;
+  my_uartIMUdata.pitch += my_ahrs.Angle_Data.pitch;
+  my_uartIMUdata.yaw += my_ahrs.Angle_Data.yaw;
+  my_uartIMUdata.gyro_x += my_ahrs.IMU_Data.gyro.x;
+  my_uartIMUdata.gyro_y += my_ahrs.IMU_Data.gyro.y;
+  my_uartIMUdata.gyro_z += my_ahrs.IMU_Data.gyro.z;
+  my_uartIMUdata.acc_x += my_ahrs.IMU_Data.acc.x;
+  my_uartIMUdata.acc_y += my_ahrs.IMU_Data.acc.y;
+  my_uartIMUdata.acc_z += my_ahrs.IMU_Data.acc.z;
+  my_uartIMUdata.temperature += my_ahrs.IMU_Data.temperature;
+  switch(my_at_cmd.uart_print_mode)
+  { 
+    case AT_Print_ASCII_200:
+        //模式1 串口ASCII码打印200Hz
+				
+        if(time_1ms_cnt>=5)
+        {
+					if(my_at_cmd.int_pin_mode)	DRDY(1);
+          if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
+            uart_printf(&huart1,"Data:%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\r\n",my_uartIMUdata.roll*0.2f,my_uartIMUdata.pitch*0.2f,my_uartIMUdata.yaw*0.2f,my_uartIMUdata.gyro_x*0.2f,my_uartIMUdata.gyro_y*0.2f,my_uartIMUdata.gyro_z*0.2f,my_uartIMUdata.acc_x*0.2f,my_uartIMUdata.acc_y*0.2f,my_uartIMUdata.acc_z*0.2f,my_uartIMUdata.temperature*0.2f);
+          /***缓冲区清零***/
+          my_uartIMUdata.roll = 0;
+          my_uartIMUdata.pitch = 0;
+          my_uartIMUdata.yaw = 0;
+          my_uartIMUdata.gyro_x = 0;
+          my_uartIMUdata.gyro_y = 0;
+          my_uartIMUdata.gyro_z = 0;
+          my_uartIMUdata.acc_x = 0;
+          my_uartIMUdata.acc_y = 0;
+          my_uartIMUdata.acc_z = 0;
+          my_uartIMUdata.temperature = 0;      
+          
+          time_1ms_cnt = 0;
+					DRDY(0);
+        }
+        break;
+    case AT_Print_ASCII_100:
+        //模式1 串口ASCII码打印100Hz
+        if(time_1ms_cnt>=10)
+        {
+          if(my_at_cmd.int_pin_mode)	DRDY(1);
+          if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
+            uart_printf(&huart1,"Data:%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\r\n",my_uartIMUdata.roll*0.1f,my_uartIMUdata.pitch*0.1f,my_uartIMUdata.yaw*0.1f,my_uartIMUdata.gyro_x*0.1f,my_uartIMUdata.gyro_y*0.1f,my_uartIMUdata.gyro_z*0.1f,my_uartIMUdata.acc_x*0.1f,my_uartIMUdata.acc_y*0.1f,my_uartIMUdata.acc_z*0.1f,my_uartIMUdata.temperature*0.1f);
+          /***缓冲区清零***/
+          my_uartIMUdata.roll = 0;
+          my_uartIMUdata.pitch = 0;
+          my_uartIMUdata.yaw = 0;
+          my_uartIMUdata.gyro_x = 0;
+          my_uartIMUdata.gyro_y = 0;
+          my_uartIMUdata.gyro_z = 0;
+          my_uartIMUdata.acc_x = 0;
+          my_uartIMUdata.acc_y = 0;
+          my_uartIMUdata.acc_z = 0;
+          my_uartIMUdata.temperature = 0;      
+          
+          time_1ms_cnt = 0;
+          DRDY(0);
+        }
+        break;
+    case AT_Print_ASCII_50:
+        //模式1 串口ASCII码打印50hz
+        if(time_1ms_cnt>=20)
+        {
+          if(my_at_cmd.int_pin_mode)	DRDY(1);
+          if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
+            uart_printf(&huart1,"Data:%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\r\n",my_uartIMUdata.roll*0.05f,my_uartIMUdata.pitch*0.05f,my_uartIMUdata.yaw*0.05f,my_uartIMUdata.gyro_x*0.05f,my_uartIMUdata.gyro_y*0.05f,my_uartIMUdata.gyro_z*0.05f,my_uartIMUdata.acc_x*0.05f,my_uartIMUdata.acc_y*0.05f,my_uartIMUdata.acc_z*0.05f,my_uartIMUdata.temperature*0.05f);
+          /***缓冲区清零***/
+          my_uartIMUdata.roll = 0;
+          my_uartIMUdata.pitch = 0;
+          my_uartIMUdata.yaw = 0;
+          my_uartIMUdata.gyro_x = 0;
+          my_uartIMUdata.gyro_y = 0;
+          my_uartIMUdata.gyro_z = 0;
+          my_uartIMUdata.acc_x = 0;
+          my_uartIMUdata.acc_y = 0;
+          my_uartIMUdata.acc_z = 0;
+          my_uartIMUdata.temperature = 0;      
+          
+          time_1ms_cnt = 0;
+          DRDY(0);
+        }
+        break;
+    case AT_Print_HEX_1000:
+        //模式2 串口HEX打印1000Hz
+       if(my_at_cmd.int_pin_mode)	DRDY(1);
+        /*帧头*/
+        data_buf[0] = 0x5A;
+        data_buf[1] = 0xA5;   
+        /*数据*/
+        memcpy(&data_buf[2],(uint8_t *)&my_uartIMUdata.roll,4*10);
+        /*帧尾*/
+        data_buf[42] = 0x0D;
+        data_buf[43] = 0x0A;		
+      
+        if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
+          HAL_UART_Transmit_DMA(&huart1,data_buf,44);
 
-	if(at_cmd==AT_Print_ASCII)
-	{
-		//模式1 串口ASCII码打印--满足VOFA+ FireWater格式
-		if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
-			uart_printf(&huart1,"Data:%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\r\n",my_ahrs.Angle_Data.roll,my_ahrs.Angle_Data.pitch,my_ahrs.Angle_Data.yaw,my_ahrs.IMU_Data.gyro.x,my_ahrs.IMU_Data.gyro.y,my_ahrs.IMU_Data.gyro.z,my_ahrs.IMU_Data.acc.x,my_ahrs.IMU_Data.acc.y,my_ahrs.IMU_Data.acc.z,my_ahrs.IMU_Data.temperature,my_MMU.angle.yaw);
-	}
-	else if(at_cmd==AT_Print_HEX)
-	{
-		//模式2 串口HEX打印
-		memset(data_buf,0xFF,50);
-		/*帧头*/
-		data_buf[0] = 0x5A;
-		data_buf[1] = 0xA5;
-		
-		/*数据*/
-		memcpy(&data_buf[2],(uint8_t *)&my_ahrs.Angle_Data,4*3);
-		memcpy(&data_buf[14],(uint8_t *)&my_ahrs.IMU_Data,4*7);
-		
-		/*帧尾*/
-		data_buf[42] = 0x0D;
-		data_buf[43] = 0x0A;		
-		
-		if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
-			HAL_UART_Transmit_DMA(&huart1,data_buf,44);
-	}
-	else
-	{
-		printf("change AT:%d\r\n",at_cmd);
-	}
+        /***缓冲区清零***/
+        my_uartIMUdata.roll = 0;
+        my_uartIMUdata.pitch = 0;
+        my_uartIMUdata.yaw = 0;
+        my_uartIMUdata.gyro_x = 0;
+        my_uartIMUdata.gyro_y = 0;
+        my_uartIMUdata.gyro_z = 0;
+        my_uartIMUdata.acc_x = 0;
+        my_uartIMUdata.acc_y = 0;
+        my_uartIMUdata.acc_z = 0;
+        my_uartIMUdata.temperature = 0;      
+        
+        time_1ms_cnt = 0;    
+        DRDY(0);
+        break;
+    case AT_Print_HEX_500:
+        //模式2 串口HEX打印500Hz
+        
+        if(time_1ms_cnt>=2)
+        {
+          if(my_at_cmd.int_pin_mode)	DRDY(1);
+          /***均值处理***/
+          my_uartIMUdata.roll *= 0.5f;
+          my_uartIMUdata.pitch *= 0.5f;
+          my_uartIMUdata.yaw *= 0.5f;
+          my_uartIMUdata.gyro_x *= 0.5f;
+          my_uartIMUdata.gyro_y *= 0.5f;
+          my_uartIMUdata.gyro_z *= 0.5f;
+          my_uartIMUdata.acc_x *= 0.5f;
+          my_uartIMUdata.acc_y *= 0.5f;
+          my_uartIMUdata.acc_z *= 0.5f;
+          my_uartIMUdata.temperature *= 0.5f;      
+
+          /*帧头*/
+          data_buf[0] = 0x5A;
+          data_buf[1] = 0xA5;
+          /*数据*/
+          memcpy(&data_buf[2],(uint8_t *)&my_uartIMUdata.roll,4*10);
+          /*帧尾*/
+          data_buf[42] = 0x0D;
+          data_buf[43] = 0x0A;		
+        
+          if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
+            HAL_UART_Transmit_DMA(&huart1,data_buf,44);
+            
+          /***缓冲区清零***/
+          my_uartIMUdata.roll = 0;
+          my_uartIMUdata.pitch = 0;
+          my_uartIMUdata.yaw = 0;
+          my_uartIMUdata.gyro_x = 0;
+          my_uartIMUdata.gyro_y = 0;
+          my_uartIMUdata.gyro_z = 0;
+          my_uartIMUdata.acc_x = 0;
+          my_uartIMUdata.acc_y = 0;
+          my_uartIMUdata.acc_z = 0;
+          my_uartIMUdata.temperature = 0;      
+          
+          time_1ms_cnt = 0; 
+          DRDY(0);
+        }     
+        break;         
+    case AT_Print_HEX_100:
+        //模式2 串口HEX打印100Hz
+        
+        if(time_1ms_cnt>=10)
+        {
+          if(my_at_cmd.int_pin_mode)	DRDY(1);
+          /***均值处理***/
+          my_uartIMUdata.roll *= 0.1f;
+          my_uartIMUdata.pitch *= 0.1f;
+          my_uartIMUdata.yaw *= 0.1f;
+          my_uartIMUdata.gyro_x *= 0.1f;
+          my_uartIMUdata.gyro_y *= 0.1f;
+          my_uartIMUdata.gyro_z *= 0.1f;
+          my_uartIMUdata.acc_x *= 0.1f;
+          my_uartIMUdata.acc_y *= 0.1f;
+          my_uartIMUdata.acc_z *= 0.1f;
+          my_uartIMUdata.temperature *= 0.1f;      
+
+          /*帧头*/
+          data_buf[0] = 0x5A;
+          data_buf[1] = 0xA5;
+          /*数据*/
+          memcpy(&data_buf[2],(uint8_t *)&my_uartIMUdata.roll,4*10);
+          /*帧尾*/
+          data_buf[42] = 0x0D;
+          data_buf[43] = 0x0A;		
+        
+          if(HAL_DMA_GetState(&hdma_usart1_tx) == HAL_DMA_STATE_READY)
+            HAL_UART_Transmit_DMA(&huart1,data_buf,44);
+            
+          /***缓冲区清零***/
+          my_uartIMUdata.roll = 0;
+          my_uartIMUdata.pitch = 0;
+          my_uartIMUdata.yaw = 0;
+          my_uartIMUdata.gyro_x = 0;
+          my_uartIMUdata.gyro_y = 0;
+          my_uartIMUdata.gyro_z = 0;
+          my_uartIMUdata.acc_x = 0;
+          my_uartIMUdata.acc_y = 0;
+          my_uartIMUdata.acc_z = 0;
+          my_uartIMUdata.temperature = 0;      
+          
+          time_1ms_cnt = 0;  
+          DRDY(0);
+        }    
+        break;     
+  }
+  
 }
 
 
 AT_CMD_MODE_TypeDef my_at_cmd;
-void uart_AT_CMD_Init()
-{
-	my_at_cmd.uart_print_mode = AT_Print_HEX;//初始默认16进制打印
-	my_at_cmd.mmu_mode = AT_NOT_MMU;//初始默认不使用磁力计
-	my_at_cmd.int_pin_mode = AT_NOT_INT;//初始默认不使用中断
-}
+
+uint32_t flash_data_store = 0x00000000;
 void uart_AT_cmd_decoder(uint8_t * data,uint16_t size)
 {
-
-	if(data[0] == 'A'&&data[1] == 'T'&&data[size-1]==0x0A)
+  static char str_buf[20];
+	if(data[0] == 'A'&&data[1] == 'T'&&data[size-2]==0x0D&&data[size-1]==0x0A)
 	{
 		/***确认为AT指令***/
 		if(data[2]=='+')
 		{
-			switch(data[3])
-			{
-				case '1':
-					my_at_cmd.uart_print_mode = AT_Print_ASCII;
+      memcpy(str_buf,(char *)&data[3],size-5);
+      if(strcmp(str_buf,"MODE=HEX1000")==0)
+      {
+        my_at_cmd.uart_print_mode = AT_Print_HEX_1000;
 
-          stmflash_write(FLASH_ADDR_BASE,(uint64_t*)&my_at_cmd.uart_print_mode,1);//写入FLASH
-					break;
-				case '2':
-					my_at_cmd.uart_print_mode = AT_Print_HEX;
+      }
+      else if(strcmp(str_buf,"MODE=HEX500")==0)
+      {
+        my_at_cmd.uart_print_mode = AT_Print_HEX_500;
 
-          stmflash_write(FLASH_ADDR_BASE,(uint64_t*)&my_at_cmd.uart_print_mode,1);//写入FLASH
-					break;
-			}
+      }
+      else if(strcmp(str_buf,"MODE=HEX100")==0)
+      {
+        my_at_cmd.uart_print_mode = AT_Print_HEX_100;
+
+
+      }
+      else if(strcmp(str_buf,"MODE=ASCII200")==0)
+      {
+        my_at_cmd.uart_print_mode = AT_Print_ASCII_200;
+
+
+      }
+      else if(strcmp(str_buf,"MODE=ASCII100")==0)
+      {
+        my_at_cmd.uart_print_mode = AT_Print_ASCII_100;
+
+
+      }
+      else if(strcmp(str_buf,"MODE=ASCII50")==0)
+      {
+        my_at_cmd.uart_print_mode = AT_Print_ASCII_50;
+
+
+      }
+      else if(strcmp(str_buf,"MMU=ON")==0)
+      {
+        my_at_cmd.mmu_mode = AT_MMU_ON;
+
+
+      }
+      else if(strcmp(str_buf,"MMU=OFF")==0)
+      {
+        my_at_cmd.mmu_mode = AT_MMU_OFF;
+
+      }
+      else if(strcmp(str_buf,"INT=ON")==0)
+      {
+        my_at_cmd.int_pin_mode = AT_INT_ON;
+
+
+      }
+      else if(strcmp(str_buf,"INT=OFF")==0)
+      {
+        my_at_cmd.int_pin_mode = AT_INT_OFF;
+      }
+			flash_data_store = my_at_cmd.uart_print_mode | (my_at_cmd.mmu_mode<<4) | (my_at_cmd.int_pin_mode<<5);
+		  stmflash_write(FLASH_ADDR_BASE,(uint64_t*)&flash_data_store,1);//写入FLASH
 		}
 		else
 		{
 			printf("AT_OK\r\n");
 		}
-
-		
 	}
+	memset(str_buf,0x00,sizeof(str_buf));
 }
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {

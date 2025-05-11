@@ -41,12 +41,18 @@ extern UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN Private defines */
 
-#define	AT_Print_ASCII  0x0001  //数据输出字符格式
-#define	AT_Print_HEX  0x0002		//数据输出16进制格式
-#define AT_USE_MMU 0x0003				//使用磁力计
-#define AT_NOT_MMU 0x0004				//关闭磁力计
-#define AT_USE_INT 0x0005				//使用中断引脚
-#define AT_NOT_INT 0x0006				//关闭中断引脚
+#define	AT_Print_ASCII_200  0x0000  //数据输出字符格式200Hz
+#define	AT_Print_ASCII_100  0x0001  //数据输出字符格式100Hz
+#define	AT_Print_ASCII_50  	0x0002  //数据输出字符格式50Hz
+#define	AT_Print_HEX_1000  	0x0003		//数据输出16进制格式1000Hz
+#define	AT_Print_HEX_500  	0x0004		//数据输出16进制格式500Hz
+#define	AT_Print_HEX_100  	0x0005		//数据输出16进制格式100Hz
+
+#define AT_MMU_OFF 					0x0000				//关闭磁力计
+#define AT_MMU_ON 					0x0001				//开启磁力计
+
+#define AT_INT_OFF 					0x0000				//使用中断引脚
+#define AT_INT_ON 					0x0001				//关闭中断引脚
 
 typedef struct
 {
@@ -55,11 +61,27 @@ typedef struct
 	uint32_t int_pin_mode;	//中断引脚模式
 }AT_CMD_MODE_TypeDef;
 
+typedef struct
+{
+  float roll;	
+  float pitch;
+  float yaw;
+  float gyro_x;
+  float gyro_y;
+  float gyro_z;
+  float acc_x;
+  float acc_y;
+  float acc_z;
+  float temperature;
+}UART_IMU_DATA_PRINT_TypeDef;
+
+
 
 void uart_printf(UART_HandleTypeDef *huart,const char *format, ...);
-void uart_send_IMU_data(uint16_t at_cmd);
+void uart_send_IMU_data(void);
 extern AT_CMD_MODE_TypeDef my_at_cmd;
 extern uint8_t USART1_RX_BUF[512];
+extern uint32_t flash_data_store;
 /* USER CODE END Private defines */
 
 void MX_USART1_UART_Init(void);

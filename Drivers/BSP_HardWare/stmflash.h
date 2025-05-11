@@ -23,6 +23,7 @@
 
 #define FLASH_ADDR_BASE         0x0801f800
 
+
 #define FLASH_NULL_U8           0xff
 #define FLASH_NULL_U16          0xffff
 #define FLASH_NULL_U32          0xffffffff
